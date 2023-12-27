@@ -1,5 +1,8 @@
 pkg_print_deps() {
-    echo ""
+    deps=(
+        ./ports/l/libtasn1-4.19.0
+    )
+    echo "${deps[@]}"
 }
 
 pkg_build() {
