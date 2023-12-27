@@ -1,0 +1,45 @@
+#!/bin/bash
+set -euo pipefail
+
+if [[ $# == 0 ]]; then
+    echo "" 1>&2
+    echo "usage: $0 package_script..." 1>&2
+    echo "" 1>&2
+    echo "example:" 1>&2
+    echo "  ./bin/pkg_build ./ports/g/go-1.20.12" 1>&2
+    echo "" 1>&2
+    exit 1
+fi
+
+. lib/core.bash
+
+build() {
+    local script_name=$1/package.bash
+
+    if [[ ! -f $script_name ]]; then
+        echo "FATAL: $script_name: no such file or directory" 1>&2
+        exit 1
+    fi
+
+    (
+        . $script_name
+
+        for dependency in $(pkg_print_deps); do
+            (
+                $0 $dependency
+            )
+        done
+
+        WORKDIR=$(pkg_lib_run mktemp -d)
+
+        pkg_lib_run cd $WORKDIR
+
+        pkg_build
+
+        pkg_lib_run rm -rf $WORKDIR
+    )
+}
+
+for script_name in "$@"; do
+    build $script_name
+done
