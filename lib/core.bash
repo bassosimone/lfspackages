@@ -61,3 +61,27 @@ pkg_lib_symlink_all() {
         pkg_lib_run sudo ln -sf $file $dest/$corename
     done
 }
+
+#doc: pkg_lib_maybe_copy_etc_all SOURCE DEST creates a directory in DEST
+#doc: for each directory in SOURCE and then copies files in there if they
+#doc: do not exist; otherwise, it creates .new files.
+pkg_lib_maybe_copy_etc_all() {
+    local source=$1
+    local dest=$2
+
+    pkg_lib_run sudo install -d $dest
+    for dir in $(find $source -mindepth 1 -type d); do
+        corename=${dir##$source}
+        pkg_lib_run sudo install -d $dest/$corename
+    done
+
+    for file in $(find $source -type f -o -type l); do
+        corename=${file##$source}
+        destname=$dest/$corename
+        if [[ -f $destname ]]; then
+            pkg_lib_run sudo cp -p $file $dest/$corename.new
+            continue
+        fi
+        pkg_lib_run sudo cp -p $file $dest/$corename
+    done
+}
