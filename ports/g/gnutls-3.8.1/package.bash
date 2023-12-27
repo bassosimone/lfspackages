@@ -7,12 +7,11 @@ pkg_print_deps() {
     echo "${deps[@]}"
 }
 
-pkg_build() {
-    if [[ -d /opt/package/gnutls-3.8.1 ]]; then
-        pkg_lib_info "gnutls-3.8.1: already built"
-        return
-    fi
+pkg_print_destdir() {
+    echo "/opt/package/gnutls-3.8.1"
+}
 
+pkg_build() {
     pkg_lib_download https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.1.tar.xz
     pkg_lib_verify gnutls-3.8.1.tar.xz ba8b9e15ae20aba88f44661978f5b5863494316fe7e722ede9d069fe6294829c
     pkg_lib_extract gnutls-3.8.1.tar.xz
@@ -30,11 +29,6 @@ pkg_build() {
 }
 
 pkg_link() {
-    if [[ ! -d /opt/package/gnutls-3.8.1 ]]; then
-        pkg_lib_warn "gnutls-3.8.1: not built"
-        return
-    fi
-
     for dirname in bin include lib share; do
         pkg_lib_symlink_all /opt/package/gnutls-3.8.1/$dirname /opt/$dirname
     done

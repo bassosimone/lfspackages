@@ -2,12 +2,11 @@ pkg_print_deps() {
     echo ""
 }
 
-pkg_build() {
-    if [[ -d /opt/package/go-1.20.12 ]]; then
-        pkg_lib_info "go-1.20.12: already built"
-        return
-    fi
+pkg_print_destdir() {
+    echo "/opt/package/go-1.20.12"
+}
 
+pkg_build() {
     pkg_lib_download https://go.dev/dl/go1.20.12.src.tar.gz
     pkg_lib_verify go1.20.12.src.tar.gz c5bf934751d31c315c1d0bb5fb02296545fa6d08923566f7a5afec81f2ed27d6
     pkg_lib_extract go1.20.12.src.tar.gz
@@ -28,11 +27,6 @@ pkg_build() {
 }
 
 pkg_link() {
-    if [[ ! -d /opt/package/go-1.20.12 ]]; then
-        pkg_lib_warn "go-1.20.12: not built"
-        return
-    fi
-
     pkg_lib_symlink /opt/package/go-1.20.12/bin/go /opt/bin/go
     pkg_lib_symlink /opt/package/go-1.20.12/bin/gofmt /opt/bin/gofmt
 }

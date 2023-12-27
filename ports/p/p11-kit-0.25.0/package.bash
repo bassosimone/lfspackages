@@ -5,12 +5,11 @@ pkg_print_deps() {
     echo "${deps[@]}"
 }
 
-pkg_build() {
-    if [[ -d /opt/package/p11-kit-0.25.0 ]]; then
-        pkg_lib_info "p11-kit-0.25.0: already built"
-        return
-    fi
+pkg_print_destdir() {
+    echo "/opt/package/p11-kit-0.25.0"
+}
 
+pkg_build() {
     pkg_lib_download https://github.com/p11-glue/p11-kit/releases/download/0.25.0/p11-kit-0.25.0.tar.xz
     pkg_lib_verify p11-kit-0.25.0.tar.xz d55583bcdde83d86579cabe3a8f7f2638675fef01d23cace733ff748fc354706
     pkg_lib_extract p11-kit-0.25.0.tar.xz
@@ -34,11 +33,6 @@ pkg_build() {
 }
 
 pkg_link() {
-    if [[ ! -d /opt/package/p11-kit-0.25.0 ]]; then
-        pkg_lib_warn "p11-kit-0.25.0: not built"
-        return
-    fi
-
     for dirname in bin include lib libexec share; do
         pkg_lib_symlink_all /opt/package/p11-kit-0.25.0/$dirname /opt/$dirname
     done

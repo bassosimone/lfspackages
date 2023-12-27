@@ -6,12 +6,12 @@ pkg_lib_run() {
 
 #doc: pkg_lib_info ARGS... logs an informational message to stderr.
 pkg_lib_info() {
-    echo "🗒️ $@"
+    echo "🗒️ $@" 1>&2
 }
 
 #doc: pkg_lib_warn ARGS... logs a warning message to stderr.
 pkg_lib_warn() {
-    echo "️🚨 $@"
+    echo "️🚨 $@" 1>&2
 }
 
 #doc: pkg_lib_download URL downloads the package at URL.

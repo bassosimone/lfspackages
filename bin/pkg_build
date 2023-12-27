@@ -30,6 +30,17 @@ build() {
             )
         done
 
+        __destdir=$(pkg_print_destdir)
+        if [[ -d $__destdir ]]; then
+            pkg_lib_info "package $script_name already installed at $__destdir"
+            return
+        fi
+
+        # ensure packages find the /opt alternative root
+        pkg_lib_run export PKG_CONFIG_PATH="/opt/lib/pkgconfig:/usr/lib/pkgconfig"
+        pkg_lib_run export CFLAGS="-I/opt/include ${CFLAGS:-}"
+        pkg_lib_run export LDFLAGS="-L/opt/lib ${LDFLAGS:-}"
+
         WORKDIR=$(pkg_lib_run mktemp -d)
 
         pkg_lib_run cd $WORKDIR
@@ -41,11 +52,6 @@ build() {
         pkg_link
     )
 }
-
-# ensure packages find the /opt alternative root
-pkg_lib_run export PKG_CONFIG_PATH="/opt/lib/pkgconfig:/usr/lib/pkgconfig"
-pkg_lib_run export CFLAGS="-I/opt/include ${CFLAGS:-}"
-pkg_lib_run export LDFLAGS="-L/opt/lib ${LDFLAGS:-}"
 
 for script_name in "$@"; do
     build $script_name
