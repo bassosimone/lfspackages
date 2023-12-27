@@ -37,8 +37,15 @@ build() {
         pkg_build
 
         pkg_lib_run rm -rf $WORKDIR
+
+        pkg_link
     )
 }
+
+# ensure packages find the /opt alternative root
+pkg_lib_run export PKG_CONFIG_PATH="/opt/lib/pkgconfig:/usr/lib/pkgconfig"
+pkg_lib_run export CFLAGS="-I/opt/include ${CFLAGS:-}"
+pkg_lib_run export LDFLAGS="-L/opt/lib ${LDFLAGS:-}"
 
 for script_name in "$@"; do
     build $script_name
