@@ -6,7 +6,7 @@ if [[ $# == 0 ]]; then
     echo "usage: $0 package_script..." 1>&2
     echo "" 1>&2
     echo "example:" 1>&2
-    echo "  ./bin/pkg_link ./ports/g/go-1.20.12" 1>&2
+    echo "  ./bin/pkg_install ./ports/g/go-1.20.12" 1>&2
     echo "" 1>&2
     exit 1
 fi
@@ -14,5 +14,5 @@ fi
 . lib/core.bash
 
 for script_name in "$@"; do
-    pkg_cli_link $script_name
+    pkg_cli_install_recursive $script_name
 done

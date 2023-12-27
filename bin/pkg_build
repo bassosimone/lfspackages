@@ -13,46 +13,6 @@ fi
 
 . lib/core.bash
 
-build() {
-    local script_name=$1/package.bash
-
-    if [[ ! -f $script_name ]]; then
-        echo "FATAL: $script_name: no such file or directory" 1>&2
-        exit 1
-    fi
-
-    (
-        . $script_name
-
-        for dependency in $(pkg_print_deps); do
-            (
-                $0 $dependency
-            )
-        done
-
-        __destdir=$(pkg_print_destdir)
-        if [[ -d $__destdir ]]; then
-            pkg_lib_info "package $script_name already installed at $__destdir"
-            return
-        fi
-
-        # ensure packages find the /opt alternative root
-        pkg_lib_run export PKG_CONFIG_PATH="/opt/lib/pkgconfig:/usr/lib/pkgconfig"
-        pkg_lib_run export CFLAGS="-I/opt/include ${CFLAGS:-}"
-        pkg_lib_run export LDFLAGS="-L/opt/lib ${LDFLAGS:-}"
-
-        WORKDIR=$(pkg_lib_run mktemp -d)
-
-        pkg_lib_run cd $WORKDIR
-
-        pkg_build
-
-        pkg_lib_run rm -rf $WORKDIR
-
-        pkg_link
-    )
-}
-
 for script_name in "$@"; do
-    build $script_name
+    pkg_cli_build $script_name
 done
