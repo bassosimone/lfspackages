@@ -1,13 +1,13 @@
-Thu Dec 28 03:12:00 PM UTC 2023
+Thu Dec 28 03:13:44 PM UTC 2023
 🐚 sudo install -d /opt/bin
-🐚 sudo ln -sf /opt/package/npth-1.6/bin/npth-config /opt/bin//npth-config
+🐚 sudo ln -sf /opt/package/npth-1.6/bin/npth-config /opt/bin/npth-config
 🐚 sudo install -d /opt/include
-🐚 sudo ln -sf /opt/package/npth-1.6/include/npth.h /opt/include//npth.h
+🐚 sudo ln -sf /opt/package/npth-1.6/include/npth.h /opt/include/npth.h
 🐚 sudo install -d /opt/lib
-🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.la /opt/lib//libnpth.la
-🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.so.0.1.2 /opt/lib//libnpth.so.0.1.2
-🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.so /opt/lib//libnpth.so
-🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.so.0 /opt/lib//libnpth.so.0
+🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.la /opt/lib/libnpth.la
+🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.so.0.1.2 /opt/lib/libnpth.so.0.1.2
+🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.so /opt/lib/libnpth.so
+🐚 sudo ln -sf /opt/package/npth-1.6/lib/libnpth.so.0 /opt/lib/libnpth.so.0
 🐚 sudo install -d /opt/share
-🐚 sudo install -d /opt/share//aclocal
-🐚 sudo ln -sf /opt/package/npth-1.6/share/aclocal/npth.m4 /opt/share//aclocal/npth.m4
+🐚 sudo install -d /opt/share/aclocal
+🐚 sudo ln -sf /opt/package/npth-1.6/share/aclocal/npth.m4 /opt/share/aclocal/npth.m4

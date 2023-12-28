@@ -1,18 +1,18 @@
-Thu Dec 28 03:12:00 PM UTC 2023
+Thu Dec 28 03:13:43 PM UTC 2023
 🐚 sudo install -d /opt/bin
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/bin/libassuan-config /opt/bin//libassuan-config
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/bin/libassuan-config /opt/bin/libassuan-config
 🐚 sudo install -d /opt/include
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/include/assuan.h /opt/include//assuan.h
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/include/assuan.h /opt/include/assuan.h
 🐚 sudo install -d /opt/lib
-🐚 sudo install -d /opt/lib//pkgconfig
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.la /opt/lib//libassuan.la
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.so.0.8.6 /opt/lib//libassuan.so.0.8.6
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.so /opt/lib//libassuan.so
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/pkgconfig/libassuan.pc /opt/lib//pkgconfig/libassuan.pc
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.so.0 /opt/lib//libassuan.so.0
+🐚 sudo install -d /opt/lib/pkgconfig
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.la /opt/lib/libassuan.la
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.so.0.8.6 /opt/lib/libassuan.so.0.8.6
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.so /opt/lib/libassuan.so
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/pkgconfig/libassuan.pc /opt/lib/pkgconfig/libassuan.pc
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/lib/libassuan.so.0 /opt/lib/libassuan.so.0
 🐚 sudo install -d /opt/share
-🐚 sudo install -d /opt/share//info
-🐚 sudo install -d /opt/share//aclocal
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/share/info/assuan.info /opt/share//info/assuan.info
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/share/info/dir /opt/share//info/dir
-🐚 sudo ln -sf /opt/package/libassuan-2.5.6/share/aclocal/libassuan.m4 /opt/share//aclocal/libassuan.m4
+🐚 sudo install -d /opt/share/info
+🐚 sudo install -d /opt/share/aclocal
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/share/info/assuan.info /opt/share/info/assuan.info
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/share/info/dir /opt/share/info/dir
+🐚 sudo ln -sf /opt/package/libassuan-2.5.6/share/aclocal/libassuan.m4 /opt/share/aclocal/libassuan.m4

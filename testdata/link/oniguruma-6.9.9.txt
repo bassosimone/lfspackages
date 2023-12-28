@@ -1,14 +1,14 @@
-Thu Dec 28 03:12:00 PM UTC 2023
+Thu Dec 28 03:13:44 PM UTC 2023
 🐚 sudo install -d /opt/bin
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/bin/onig-config /opt/bin//onig-config
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/bin/onig-config /opt/bin/onig-config
 🐚 sudo install -d /opt/include
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/include/oniggnu.h /opt/include//oniggnu.h
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/include/oniguruma.h /opt/include//oniguruma.h
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/include/oniggnu.h /opt/include/oniggnu.h
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/include/oniguruma.h /opt/include/oniguruma.h
 🐚 sudo install -d /opt/lib
-🐚 sudo install -d /opt/lib//pkgconfig
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.so.5.4.0 /opt/lib//libonig.so.5.4.0
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.so /opt/lib//libonig.so
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.la /opt/lib//libonig.la
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.so.5 /opt/lib//libonig.so.5
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/pkgconfig/oniguruma.pc /opt/lib//pkgconfig/oniguruma.pc
-🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.a /opt/lib//libonig.a
+🐚 sudo install -d /opt/lib/pkgconfig
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.so.5.4.0 /opt/lib/libonig.so.5.4.0
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.so /opt/lib/libonig.so
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.la /opt/lib/libonig.la
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.so.5 /opt/lib/libonig.so.5
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/pkgconfig/oniguruma.pc /opt/lib/pkgconfig/oniguruma.pc
+🐚 sudo ln -sf /opt/package/oniguruma-6.9.9/lib/libonig.a /opt/lib/libonig.a

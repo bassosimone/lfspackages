@@ -48,12 +48,12 @@ pkg_lib_symlink_all() {
     pkg_lib_run sudo install -d $dest
     for dir in $(find $source -mindepth 1 -type d); do
         corename=${dir##$source}
-        pkg_lib_run sudo install -d $dest/$corename
+        pkg_lib_run sudo install -d $dest$corename
     done
 
     for file in $(find $source -type f -o -type l); do
         corename=${file##$source}
-        pkg_lib_run sudo ln -sf $file $dest/$corename
+        pkg_lib_run sudo ln -sf $file $dest$corename
     done
 }
 
@@ -68,7 +68,7 @@ pkg_lib_maybe_copy_etc_all() {
     pkg_lib_run sudo install -d $dest
     for dir in $(find $source -mindepth 1 -type d); do
         corename=${dir##$source}
-        pkg_lib_run sudo install -d $dest/$corename
+        pkg_lib_run sudo install -d $dest$corename
     done
 
     # now see whether we need to create files in $dest and backlinks inside $source
@@ -81,7 +81,7 @@ pkg_lib_maybe_copy_etc_all() {
         )
 
         # /etc/wgetrc => /opt/etc/wgetrc
-        destname=$dest/$corename
+        destname=$dest$corename
 
         # if /opt/etc/wgetrc does not exist, copy it
         if [[ ! -f $destname ]]; then
