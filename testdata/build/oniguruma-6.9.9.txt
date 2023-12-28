@@ -11,7 +11,6 @@
 🐚 rm SHA256SUM
 🐚 tar -xf onig-6.9.9.tar.gz
 🐚 cd onig-6.9.9
-🐚 autoreconf -vif
 🐚 ./configure --prefix=/opt/package/oniguruma-6.9.9
 🐚 make -j8
 🐚 sudo make install

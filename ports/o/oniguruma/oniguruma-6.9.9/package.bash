@@ -13,8 +13,6 @@ pkg_build() {
 
     pkg_lib_run cd onig-6.9.9
 
-    pkg_lib_run autoreconf -vif
-
     pkg_lib_run ./configure --prefix=/opt/package/oniguruma-6.9.9
 
     pkg_lib_run make -j$(nproc)
