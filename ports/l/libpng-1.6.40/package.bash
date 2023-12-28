@@ -18,6 +18,8 @@ pkg_build() {
     pkg_lib_run make -j$(nproc)
 
     pkg_lib_run sudo make install
+
+    pkg_lib_run sudo rm -f /opt/package/libpng-1.6.40/lib/libpng{16,}.a
 }
 
 pkg_link() {
