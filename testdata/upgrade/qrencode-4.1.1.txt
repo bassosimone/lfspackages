@@ -1,0 +1,5 @@
++ ./libexec/recompile.py -n ./ports/q/qrencode/qrencode-4.1.1
+🐚 ./bin/pkg_build ./ports/q/qrencode/qrencode-4.1.1
+🐚 ./bin/pkg_link ./ports/q/qrencode/qrencode-4.1.1
+🐚 ./bin/pkg_build ./ports/p/pass/pass-1.7.4
+🐚 ./bin/pkg_link ./ports/p/pass/pass-1.7.4

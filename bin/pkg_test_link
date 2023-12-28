@@ -6,7 +6,7 @@ export PKG_LIB_DRY_RUN=:
 
 . lib/core.bash
 
-for script_name in ./ports/*/*/*; do
-    output=testdata/link/$(basename $script_name).txt
-    pkg_cli_link $script_name 2>&1 | tee $output
+for dir_name in ./ports/*/*/*; do
+    output=testdata/link/$(basename $dir_name).txt
+    pkg_cli_link $dir_name 2>&1 | tee $output
 done

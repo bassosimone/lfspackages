@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+# Make sure we're not going to recompile the package
+export PKG_LIB_DRY_RUN=:
+
+. lib/core.bash
+
+for dir_name in ./ports/*/*/*; do
+    output=testdata/upgrade/$(basename $dir_name).txt
+    ./bin/pkg_upgrade -n $dir_name 2>&1 | tee $output
+done

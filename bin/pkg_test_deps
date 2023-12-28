@@ -6,11 +6,11 @@ export PKG_LIB_DRY_RUN=:
 
 . lib/core.bash
 
-for script_name in ./ports/*/*/*; do
-    output=testdata/deps/$(basename $script_name).txt
+for dir_name in ./ports/*/*/*; do
+    output=testdata/deps/$(basename $dir_name).txt
     rm -rf $output
     touch $output
-    for dep in $(pkg_cli_printdeps $script_name); do
+    for dep in $(pkg_cli_printdeps $dir_name); do
         echo $dep | tee -a $output
     done
     sort $output

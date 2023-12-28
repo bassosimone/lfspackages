@@ -1,0 +1,3 @@
++ ./libexec/recompile.py -n ./ports/p/popt/popt-1.19
+🐚 ./bin/pkg_build ./ports/p/popt/popt-1.19
+🐚 ./bin/pkg_link ./ports/p/popt/popt-1.19

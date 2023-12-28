@@ -1,0 +1,9 @@
++ ./libexec/recompile.py -n ./ports/l/libassuan/libassuan-2.5.6
+🐚 ./bin/pkg_build ./ports/l/libassuan/libassuan-2.5.6
+🐚 ./bin/pkg_link ./ports/l/libassuan/libassuan-2.5.6
+🐚 ./bin/pkg_build ./ports/g/gnupg/gnupg-2.4.3
+🐚 ./bin/pkg_link ./ports/g/gnupg/gnupg-2.4.3
+🐚 ./bin/pkg_build ./ports/p/pinentry/pinentry-1.2.1
+🐚 ./bin/pkg_link ./ports/p/pinentry/pinentry-1.2.1
+🐚 ./bin/pkg_build ./ports/p/pass/pass-1.7.4
+🐚 ./bin/pkg_link ./ports/p/pass/pass-1.7.4

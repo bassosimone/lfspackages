@@ -1,0 +1,3 @@
++ ./libexec/recompile.py -n ./ports/j/jq/jq-1.7.1
+🐚 ./bin/pkg_build ./ports/j/jq/jq-1.7.1
+🐚 ./bin/pkg_link ./ports/j/jq/jq-1.7.1

@@ -1,0 +1,3 @@
++ ./libexec/recompile.py -n ./ports/w/wget/wget-1.21.4
+🐚 ./bin/pkg_build ./ports/w/wget/wget-1.21.4
+🐚 ./bin/pkg_link ./ports/w/wget/wget-1.21.4

@@ -1,0 +1,3 @@
++ ./libexec/recompile.py -n ./ports/g/go/go-1.21.5
+🐚 ./bin/pkg_build ./ports/g/go/go-1.21.5
+🐚 ./bin/pkg_link ./ports/g/go/go-1.21.5

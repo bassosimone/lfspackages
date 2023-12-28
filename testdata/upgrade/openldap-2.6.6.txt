@@ -1,0 +1,3 @@
++ ./libexec/recompile.py -n ./ports/o/openldap/openldap-2.6.6
+🐚 ./bin/pkg_build ./ports/o/openldap/openldap-2.6.6
+🐚 ./bin/pkg_link ./ports/o/openldap/openldap-2.6.6

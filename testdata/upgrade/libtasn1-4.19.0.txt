@@ -1,0 +1,9 @@
++ ./libexec/recompile.py -n ./ports/l/libtasn1/libtasn1-4.19.0
+🐚 ./bin/pkg_build ./ports/l/libtasn1/libtasn1-4.19.0
+🐚 ./bin/pkg_link ./ports/l/libtasn1/libtasn1-4.19.0
+🐚 ./bin/pkg_build ./ports/p/p11-kit/p11-kit-0.25.3
+🐚 ./bin/pkg_link ./ports/p/p11-kit/p11-kit-0.25.3
+🐚 ./bin/pkg_build ./ports/g/gnutls/gnutls-3.8.2
+🐚 ./bin/pkg_link ./ports/g/gnutls/gnutls-3.8.2
+🐚 ./bin/pkg_build ./ports/w/wget/wget-1.21.4
+🐚 ./bin/pkg_link ./ports/w/wget/wget-1.21.4

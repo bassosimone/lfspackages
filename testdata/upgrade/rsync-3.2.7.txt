@@ -1,0 +1,3 @@
++ ./libexec/recompile.py -n ./ports/r/rsync/rsync-3.2.7
+🐚 ./bin/pkg_build ./ports/r/rsync/rsync-3.2.7
+🐚 ./bin/pkg_link ./ports/r/rsync/rsync-3.2.7

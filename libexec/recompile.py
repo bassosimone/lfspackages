@@ -22,7 +22,7 @@ class Deps:
         """Loads forward and reverse deps."""
         for dirname in glob.glob("./ports/*/*/*"):
             argv = ["./bin/pkg_deps", dirname]
-            sys.stderr.write(f"🐚 {' '.join(argv)}\n")
+            logging.debug(f"+ {' '.join(argv)}\n")
             proc = subprocess.run(
                 argv,
                 check=True,
@@ -83,6 +83,11 @@ class Deps:
 
         logging.debug(f"fullreverse = {pprint.pformat(fullreverse)}")
         logging.debug(f"initial = {initial}")
+
+        # initial may not be in fullreverse if a package
+        # is a terminal package without reverse deps
+        if initial not in fullreverse:
+            return [initial]
 
         recompile = fullreverse[initial]
         recompile.add(initial)
