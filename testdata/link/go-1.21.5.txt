@@ -1,4 +1,4 @@
-Thu Dec 28 03:09:05 PM UTC 2023
+Thu Dec 28 03:12:00 PM UTC 2023
 🐚 sudo install -d /opt/bin
 🐚 sudo ln -sf /opt/package/go-1.21.5/bin/gofmt /opt/bin//gofmt
 🐚 sudo ln -sf /opt/package/go-1.21.5/bin/go /opt/bin//go

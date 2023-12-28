@@ -1,4 +1,4 @@
-Thu Dec 28 03:09:05 PM UTC 2023
+Thu Dec 28 03:11:59 PM UTC 2023
 🐚 sudo install -d /opt/bin
 🐚 sudo ln -sf /opt/package/gnupg-2.4.3/bin/gpgsm /opt/bin//gpgsm
 🐚 sudo ln -sf /opt/package/gnupg-2.4.3/bin/watchgnupg /opt/bin//watchgnupg

@@ -39,14 +39,6 @@ pkg_lib_extract() {
     pkg_lib_run tar -xf $tarball
 }
 
-#doc: pkg_lib_symlink SOURCE DEST creates a symlink
-pkg_lib_symlink() {
-    local source=$1
-    local dest=$2
-    pkg_lib_run sudo install -d $(dirname $dest)
-    pkg_lib_run sudo ln -sf $source $dest
-}
-
 #doc: pkg_lib_symlink_all SOURCE DEST creates a directory in DEST
 #doc: for each directory in SOURCE and then links files.
 pkg_lib_symlink_all() {

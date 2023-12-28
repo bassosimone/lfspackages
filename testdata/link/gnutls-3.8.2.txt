@@ -1,4 +1,4 @@
-Thu Dec 28 03:09:05 PM UTC 2023
+Thu Dec 28 03:11:59 PM UTC 2023
 🐚 sudo install -d /opt/bin
 🐚 sudo ln -sf /opt/package/gnutls-3.8.2/bin/gnutls-serv /opt/bin//gnutls-serv
 🐚 sudo ln -sf /opt/package/gnutls-3.8.2/bin/gnutls-cli-debug /opt/bin//gnutls-cli-debug

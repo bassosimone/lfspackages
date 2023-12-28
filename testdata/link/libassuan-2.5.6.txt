@@ -1,4 +1,4 @@
-Thu Dec 28 03:09:05 PM UTC 2023
+Thu Dec 28 03:12:00 PM UTC 2023
 🐚 sudo install -d /opt/bin
 🐚 sudo ln -sf /opt/package/libassuan-2.5.6/bin/libassuan-config /opt/bin//libassuan-config
 🐚 sudo install -d /opt/include
