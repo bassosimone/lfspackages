@@ -1,7 +1,10 @@
 #doc: pkg_lib_run COMMAND ARGS... logs and runs the given command with arguments.
 pkg_lib_run() {
     echo "🐚 $@" 1>&2
-    "$@"
+
+    # Implementation note: export PKG_LIB_DRY_RUN=: causes the code to
+    # avoid executing actual commands and allows for unit testing.
+    ${PKG_LIB_DRY_RUN:-} "$@"
 }
 
 #doc: pkg_lib_info ARGS... logs an informational message to stderr.
