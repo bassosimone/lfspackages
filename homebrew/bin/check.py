@@ -8,7 +8,6 @@ import sys
 
 def main():
     for dirname in glob.glob("./ports/*/*"):
-
         pkgname = dirname.split("/")[-1]
 
         formula = f"./homebrew/formulae/{pkgname}.json"
