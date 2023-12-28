@@ -27,6 +27,7 @@ pkg_build() {
 }
 
 pkg_link() {
-    pkg_lib_symlink /opt/package/${__pkg_distro_name}/bin/which /opt/bin/which
-    pkg_lib_symlink /opt/package/${__pkg_distro_name}/share/man/man1/which.1 /opt/share/man/man1/which.1
+    for dirname in bin share; do
+        pkg_lib_symlink_all /opt/package/${__pkg_distro_name}/$dirname /opt/$dirname
+    done
 }

@@ -27,6 +27,5 @@ pkg_build() {
 }
 
 pkg_link() {
-    pkg_lib_symlink /opt/package/go-1.20.12/bin/go /opt/bin/go
-    pkg_lib_symlink /opt/package/go-1.20.12/bin/gofmt /opt/bin/gofmt
+    pkg_lib_symlink_all /opt/package/go-1.20.12/bin /opt/bin
 }

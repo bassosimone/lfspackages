@@ -1,4 +1,4 @@
-Thu Dec 28 03:01:35 PM UTC 2023
+Thu Dec 28 03:09:05 PM UTC 2023
 🐚 sudo install -d /opt/bin
 🐚 sudo ln -sf /opt/package/nettle-3.9.1/bin/sexp-conv /opt/bin//sexp-conv
 🐚 sudo ln -sf /opt/package/nettle-3.9.1/bin/nettle-hash /opt/bin//nettle-hash

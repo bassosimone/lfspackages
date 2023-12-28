@@ -1,4 +1,4 @@
-Thu Dec 28 03:01:35 PM UTC 2023
+Thu Dec 28 03:09:05 PM UTC 2023
 🐚 sudo install -d /opt/bin
 🐚 sudo ln -sf /opt/package/libpng-1.6.40/bin/libpng16-config /opt/bin//libpng16-config
 🐚 sudo ln -sf /opt/package/libpng-1.6.40/bin/libpng-config /opt/bin//libpng-config
