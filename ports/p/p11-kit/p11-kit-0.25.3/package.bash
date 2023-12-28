@@ -30,6 +30,7 @@ pkg_build() {
     pkg_lib_run ninja
 
     pkg_lib_run sudo ninja install
+    pkg_lib_run sudo find /opt/package/p11-kit-0.25.3/etc -type f -exec mv {} {}.new \;
 }
 
 pkg_link() {

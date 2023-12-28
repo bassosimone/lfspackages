@@ -22,11 +22,13 @@ pkg_build() {
     pkg_lib_run make -j$(nproc)
 
     pkg_lib_run sudo make install
+    pkg_lib_run sudo find /opt/package/wget-1.21.4/etc -type f -exec mv {} {}.new \;
 }
 
 pkg_link() {
     for dirname in bin share; do
         pkg_lib_symlink_all /opt/package/wget-1.21.4/$dirname /opt/$dirname
     done
+
     pkg_lib_maybe_copy_etc_all /opt/package/wget-1.21.4/etc /opt/etc
 }

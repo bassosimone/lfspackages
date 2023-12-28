@@ -69,20 +69,32 @@ pkg_lib_maybe_copy_etc_all() {
     local source=$1
     local dest=$2
 
+    # install all the missing directories inside of $dest
     pkg_lib_run sudo install -d $dest
     for dir in $(find $source -mindepth 1 -type d); do
         corename=${dir##$source}
         pkg_lib_run sudo install -d $dest/$corename
     done
 
-    for file in $(find $source -type f -o -type l); do
-        corename=${file##$source}
+    # now see whether we need to create files in $dest and backlinks inside $source
+    for file in $(find $source \( -type f -o -type l \) -name '*.new'); do
+
+        # /opt/package/wget-1.21.4/etc/wgetrc.new => /etc/wgetrc
+        corename=$(
+            stemname=${file##$source}
+            echo ${stemname%%.new}
+        )
+
+        # /etc/wgetrc => /opt/etc/wgetrc
         destname=$dest/$corename
-        if [[ -f $destname ]]; then
-            pkg_lib_run sudo cp -p $file $dest/$corename.new
-            continue
+
+        # if /opt/etc/wgetrc does not exist, copy it
+        if [[ ! -f $destname ]]; then
+            pkg_lib_run sudo cp -p $file $destname
         fi
-        pkg_lib_run sudo cp -p $file $dest/$corename
+
+        # symlink /opt/package/wget-1.21.4/etc/wgetrc to /opt/etc/wgetrc
+        pkg_lib_run sudo ln -sf $destname ${file%%.new}
     done
 }
 
