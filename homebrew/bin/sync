@@ -14,5 +14,5 @@ for dir in ./ports/*/*; do
     pkg_lib_run curl -fsSL -o ./homebrew/formulae/$formula.json \
         https://formulae.brew.sh/api/formula/$formula.json
 
-    sleep 10
+    pkg_lib_run sleep 10
 done

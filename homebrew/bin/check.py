@@ -18,6 +18,10 @@ def main():
         with open(formula, "r") as filep:
             version = json.load(filep)["versions"]["stable"]
 
+            # note: the directory inside does not include the @ sign
+            if "@" in pkgname:
+                pkgname = pkgname.split("@")[0]
+
             package_bash_dir = f"{dirname}/{pkgname}-{version}"
             if not os.path.isdir(package_bash_dir):
                 sys.stderr.write(f"warning: {package_bash_dir} does not exist\n")
