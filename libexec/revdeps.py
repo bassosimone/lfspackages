@@ -6,7 +6,7 @@ import glob
 import json
 import subprocess
 import sys
-from typing import Dict, Set
+from typing import Dict, List, Set
 
 
 def dumpset(input: Dict[str, Set[str]]):
@@ -78,12 +78,25 @@ class Deps:
 
         self.reverse = revdeps_full_set
 
+    def packages_to_recompile(self, initial: str) -> List[str]:
+        """Returns the packages to recompile given a package that was modified."""
+        result: List[str] = []
+
+        if initial not in self.reverse:
+            raise RuntimeError(f"{initial} is not a dependency")
+        result.append(initial)
+
+        return result
+
 
 def main():
     deps = Deps()
     deps.load()
     deps.expand_reverse_deps()
     deps.dump_reverse()
+    recompile = deps.packages_to_recompile("./ports/l/libgpg-error/libgpg-error-1.47")
+    json.dump(recompile, sys.stdout)
+    sys.stdout.write("\n")
 
 
 if __name__ == "__main__":
