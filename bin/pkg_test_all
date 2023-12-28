@@ -4,3 +4,4 @@ set -euo pipefail
 ./bin/pkg_test_build
 ./bin/pkg_test_deps
 ./bin/pkg_test_link
+./bin/pkg_test_upgrade

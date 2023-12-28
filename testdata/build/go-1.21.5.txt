@@ -4,8 +4,8 @@
 🐚 mktemp -d
 🐚 cd
 🐚 curl -fsSLO https://go.dev/dl/go1.21.5.src.tar.gz
-🐚 echo 285cbbdf4b6e6e62ed58f370f3f6d8c30825d6e56c5853c66d3c23bcdb09db19  go1.21.5.src.tar.gz
 🐚 tee SHA256SUM
+🐚 echo 285cbbdf4b6e6e62ed58f370f3f6d8c30825d6e56c5853c66d3c23bcdb09db19  go1.21.5.src.tar.gz
 🐚 cat SHA256SUM
 🐚 shasum -c SHA256SUM
 🐚 rm SHA256SUM
