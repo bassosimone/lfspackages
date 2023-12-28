@@ -1,6 +1,6 @@
 pkg_print_deps() {
     deps=(
-        ./ports/l/libunistring-1.1
+        ./ports/l/libunistring/libunistring-1.1
     )
     echo "${deps[@]}"
 }

@@ -1,6 +1,6 @@
 pkg_print_deps() {
     deps=(
-        ./ports/l/libtasn1-4.19.0
+        ./ports/l/libtasn1/libtasn1-4.19.0
     )
     echo "${deps[@]}"
 }

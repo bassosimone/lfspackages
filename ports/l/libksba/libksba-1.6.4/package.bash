@@ -1,6 +1,6 @@
 pkg_print_deps() {
     deps=(
-        ./ports/l/libgpg-error-1.4.7
+        ./ports/l/libgpg-error/libgpg-error-1.4.7
     )
     echo "${deps[@]}"
 }

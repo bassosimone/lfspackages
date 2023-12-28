@@ -1,8 +1,8 @@
 pkg_print_deps() {
     deps=(
-        ./ports/g/gnupg-2.4.3
-        ./ports/q/qrencode-4.1.1
-        ./ports/t/tree-2.1.1
+        ./ports/g/gnupg/gnupg-2.4.3
+        ./ports/q/qrencode/qrencode-4.1.1
+        ./ports/t/tree/tree-2.1.1
     )
     echo "${deps[@]}"
 }

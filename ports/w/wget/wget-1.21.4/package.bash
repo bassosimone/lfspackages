@@ -1,7 +1,7 @@
 pkg_print_deps() {
     deps=(
-        ./ports/g/gnupg-2.4.3
-        ./ports/l/libidn2-2.3.4
+        ./ports/g/gnupg/gnupg-2.4.3
+        ./ports/l/libidn2/libidn2-2.3.4
     )
     echo "${deps[@]}"
 }

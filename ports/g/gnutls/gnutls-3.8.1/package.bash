@@ -1,8 +1,8 @@
 pkg_print_deps() {
     deps=(
-        ./ports/l/libunistring-1.1
-        ./ports/n/nettle-3.9.1
-        ./ports/p/p11-kit-0.25.0
+        ./ports/l/libunistring/libunistring-1.1
+        ./ports/n/nettle/nettle-3.9.1
+        ./ports/p/p11-kit/p11-kit-0.25.0
     )
     echo "${deps[@]}"
 }

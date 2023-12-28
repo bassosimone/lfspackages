@@ -1,6 +1,6 @@
 pkg_print_deps() {
     deps=(
-        ./ports/l/libpng-1.6.40
+        ./ports/l/libpng/libpng-1.6.40
     )
     echo "${deps[@]}"
 }
