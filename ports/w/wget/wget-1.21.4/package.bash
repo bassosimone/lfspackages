@@ -1,34 +1,20 @@
-pkg_print_deps() {
-    deps=(
-        ./ports/g/gnutls/gnutls-3.8.2
-        ./ports/l/libidn2/libidn2-2.3.4
-    )
-    echo "${deps[@]}"
-}
-
-pkg_print_destdir() {
-    echo "/opt/package/wget-1.21.4"
-}
+__pkg_sha256=81542f5cefb8faacc39bbbc6c82ded80e3e4a88505ae72ea51df27525bcde04c
+__pkg_name=wget
+__pkg_version=1.21.4
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.gz
+__pkg_tarball_url=https://ftp.gnu.org/gnu/wget/${__pkg_tarball_name}
+__pkg_configure_extra_args=()
+__pkg_build_type=autotools
+__pkg_deps=(
+    ./ports/g/gnutls/gnutls-3.8.2
+    ./ports/l/libidn2/libidn2-2.3.4
+)
+__pkg_link_dirs=(bin share)
+__pkg_maybe_copy_persistent_config=(etc)
 
 pkg_build() {
-    pkg_lib_download https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz
-    pkg_lib_verify wget-1.21.4.tar.gz 81542f5cefb8faacc39bbbc6c82ded80e3e4a88505ae72ea51df27525bcde04c
-    pkg_lib_extract wget-1.21.4.tar.gz
-
-    pkg_lib_run cd wget-1.21.4
-
-    pkg_lib_run ./configure --prefix=/opt/package/wget-1.21.4
-
-    pkg_lib_run make -j$(nproc)
-
-    pkg_lib_run sudo make install
+    pkg_build_autotools
     pkg_lib_run sudo find /opt/package/wget-1.21.4/etc -type f -exec mv {} {}.new \;
-}
-
-pkg_link() {
-    for dirname in bin share; do
-        pkg_lib_symlink_all /opt/package/wget-1.21.4/$dirname /opt/$dirname
-    done
-
-    pkg_lib_maybe_copy_etc_all /opt/package/wget-1.21.4/etc /opt/etc
 }

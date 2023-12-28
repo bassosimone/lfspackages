@@ -1,30 +1,14 @@
-pkg_print_deps() {
-    deps=(
-        ./ports/l/libpng/libpng-1.6.40
-    )
-    echo "${deps[@]}"
-}
-
-pkg_print_destdir() {
-    echo "/opt/package/qrencode-4.1.1"
-}
-
-pkg_build() {
-    pkg_lib_download https://fukuchi.org/works/qrencode/qrencode-4.1.1.tar.gz
-    pkg_lib_verify qrencode-4.1.1.tar.gz da448ed4f52aba6bcb0cd48cac0dd51b8692bccc4cd127431402fca6f8171e8e
-    pkg_lib_extract qrencode-4.1.1.tar.gz
-
-    pkg_lib_run cd qrencode-4.1.1
-
-    pkg_lib_run ./configure --prefix=/opt/package/qrencode-4.1.1
-
-    pkg_lib_run make -j$(nproc)
-
-    pkg_lib_run sudo make install
-}
-
-pkg_link() {
-    for dirname in bin include lib share; do
-        pkg_lib_symlink_all /opt/package/qrencode-4.1.1/$dirname /opt/$dirname
-    done
-}
+__pkg_sha256=da448ed4f52aba6bcb0cd48cac0dd51b8692bccc4cd127431402fca6f8171e8e
+__pkg_name=qrencode
+__pkg_version=4.1.1
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.gz
+__pkg_tarball_url=https://fukuchi.org/works/qrencode/${__pkg_tarball_name}
+__pkg_configure_extra_args=()
+__pkg_build_type=autotools
+__pkg_deps=(
+    ./ports/l/libpng/libpng-1.6.40
+)
+__pkg_link_dirs=(bin include lib share)
+__pkg_maybe_copy_persistent_config=()

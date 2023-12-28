@@ -1,29 +1,16 @@
-pkg_print_deps() {
-    deps=(
-        ./ports/l/libassuan/libassuan-2.5.6
-    )
-    echo "${deps[@]}"
-}
-
-pkg_print_destdir() {
-    echo "/opt/package/pinentry-1.2.1"
-}
-
-pkg_build() {
-    pkg_lib_download https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.1.tar.bz2
-    pkg_lib_verify pinentry-1.2.1.tar.bz2 457a185e5a85238fb945a955dc6352ab962dc8b48720b62fc9fa48c7540a4067
-    pkg_lib_extract pinentry-1.2.1.tar.bz2
-
-    pkg_lib_run cd pinentry-1.2.1
-
-    pkg_lib_run ./configure --prefix=/opt/package/pinentry-1.2.1 --enable-pinentry-tty
-    pkg_lib_run make -j$(nproc)
-
-    pkg_lib_run sudo make install
-}
-
-pkg_link() {
-    for dirname in bin share; do
-        pkg_lib_symlink_all /opt/package/pinentry-1.2.1/$dirname /opt/$dirname
-    done
-}
+__pkg_sha256=457a185e5a85238fb945a955dc6352ab962dc8b48720b62fc9fa48c7540a4067
+__pkg_name=pinentry
+__pkg_version=1.2.1
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.bz2
+__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/pinentry/${__pkg_tarball_name}
+__pkg_configure_extra_args=(
+    --enable-pinentry-tty
+)
+__pkg_build_type=autotools
+__pkg_deps=(
+    ./ports/l/libassuan/libassuan-2.5.6
+)
+__pkg_link_dirs=(bin share)
+__pkg_maybe_copy_persistent_config=()
