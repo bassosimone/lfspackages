@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euo pipefail
+
+. lib/core.bash
+
+for dir in ./ports/*/*; do
+    formula=$(basename $dir)
+
+    # the following formulae are not available in homebrew
+    if [[ $formula == "which" ]]; then
+        continue
+    fi
+
+    pkg_lib_run curl -fsSL -o ./homebrew/formulae/$formula.json \
+        https://formulae.brew.sh/api/formula/$formula.json
+
+    sleep 10
+done
