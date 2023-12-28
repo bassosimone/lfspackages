@@ -150,13 +150,6 @@ pkg_cli_link() {
 
     (
         . $dir_name/package.bash
-
-        __destdir=$(pkg_print_destdir)
-        if [[ ! -d $__destdir ]]; then
-            pkg_lib_warn "package $dir_name not installed at $__destdir"
-            return
-        fi
-
         pkg_link
     )
 }

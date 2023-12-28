@@ -1,0 +1,9 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/bin
+🐚 sudo ln -sf /opt/package/pinentry-1.2.1/bin/pinentry /opt/bin//pinentry
+🐚 sudo ln -sf /opt/package/pinentry-1.2.1/bin/pinentry-tty /opt/bin//pinentry-tty
+🐚 sudo ln -sf /opt/package/pinentry-1.2.1/bin/pinentry-curses /opt/bin//pinentry-curses
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//info
+🐚 sudo ln -sf /opt/package/pinentry-1.2.1/share/info/dir /opt/share//info/dir
+🐚 sudo ln -sf /opt/package/pinentry-1.2.1/share/info/pinentry.info /opt/share//info/pinentry.info

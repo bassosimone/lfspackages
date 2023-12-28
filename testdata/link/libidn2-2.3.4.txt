@@ -1,0 +1,135 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/bin
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/bin/idn2 /opt/bin//idn2
+🐚 sudo install -d /opt/include
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/include/idn2.h /opt/include//idn2.h
+🐚 sudo install -d /opt/lib
+🐚 sudo install -d /opt/lib//pkgconfig
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/lib/libidn2.so /opt/lib//libidn2.so
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/lib/libidn2.so.0 /opt/lib//libidn2.so.0
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/lib/libidn2.so.0.3.8 /opt/lib//libidn2.so.0.3.8
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/lib/libidn2.la /opt/lib//libidn2.la
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/lib/pkgconfig/libidn2.pc /opt/lib//pkgconfig/libidn2.pc
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//locale
+🐚 sudo install -d /opt/share//locale/sv
+🐚 sudo install -d /opt/share//locale/sv/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/it
+🐚 sudo install -d /opt/share//locale/it/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/zh_CN
+🐚 sudo install -d /opt/share//locale/zh_CN/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/sr
+🐚 sudo install -d /opt/share//locale/sr/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/id
+🐚 sudo install -d /opt/share//locale/id/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/de
+🐚 sudo install -d /opt/share//locale/de/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/ro
+🐚 sudo install -d /opt/share//locale/ro/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/es
+🐚 sudo install -d /opt/share//locale/es/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/fi
+🐚 sudo install -d /opt/share//locale/fi/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/hu
+🐚 sudo install -d /opt/share//locale/hu/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/vi
+🐚 sudo install -d /opt/share//locale/vi/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/ru
+🐚 sudo install -d /opt/share//locale/ru/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/fur
+🐚 sudo install -d /opt/share//locale/fur/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/ka
+🐚 sudo install -d /opt/share//locale/ka/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/cs
+🐚 sudo install -d /opt/share//locale/cs/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/fr
+🐚 sudo install -d /opt/share//locale/fr/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/nl
+🐚 sudo install -d /opt/share//locale/nl/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/uk
+🐚 sudo install -d /opt/share//locale/uk/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/eo
+🐚 sudo install -d /opt/share//locale/eo/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/pl
+🐚 sudo install -d /opt/share//locale/pl/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/ja
+🐚 sudo install -d /opt/share//locale/ja/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/da
+🐚 sudo install -d /opt/share//locale/da/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/pt_BR
+🐚 sudo install -d /opt/share//locale/pt_BR/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/hr
+🐚 sudo install -d /opt/share//locale/hr/LC_MESSAGES
+🐚 sudo install -d /opt/share//locale/ko
+🐚 sudo install -d /opt/share//locale/ko/LC_MESSAGES
+🐚 sudo install -d /opt/share//gtk-doc
+🐚 sudo install -d /opt/share//gtk-doc/html
+🐚 sudo install -d /opt/share//gtk-doc/html/libidn2
+🐚 sudo install -d /opt/share//info
+🐚 sudo install -d /opt/share//man
+🐚 sudo install -d /opt/share//man/man3
+🐚 sudo install -d /opt/share//man/man1
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/sv/LC_MESSAGES/libidn2.mo /opt/share//locale/sv/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/it/LC_MESSAGES/libidn2.mo /opt/share//locale/it/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/zh_CN/LC_MESSAGES/libidn2.mo /opt/share//locale/zh_CN/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/sr/LC_MESSAGES/libidn2.mo /opt/share//locale/sr/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/id/LC_MESSAGES/libidn2.mo /opt/share//locale/id/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/de/LC_MESSAGES/libidn2.mo /opt/share//locale/de/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/ro/LC_MESSAGES/libidn2.mo /opt/share//locale/ro/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/es/LC_MESSAGES/libidn2.mo /opt/share//locale/es/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/fi/LC_MESSAGES/libidn2.mo /opt/share//locale/fi/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/hu/LC_MESSAGES/libidn2.mo /opt/share//locale/hu/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/vi/LC_MESSAGES/libidn2.mo /opt/share//locale/vi/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/ru/LC_MESSAGES/libidn2.mo /opt/share//locale/ru/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/fur/LC_MESSAGES/libidn2.mo /opt/share//locale/fur/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/ka/LC_MESSAGES/libidn2.mo /opt/share//locale/ka/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/cs/LC_MESSAGES/libidn2.mo /opt/share//locale/cs/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/fr/LC_MESSAGES/libidn2.mo /opt/share//locale/fr/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/nl/LC_MESSAGES/libidn2.mo /opt/share//locale/nl/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/uk/LC_MESSAGES/libidn2.mo /opt/share//locale/uk/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/eo/LC_MESSAGES/libidn2.mo /opt/share//locale/eo/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/pl/LC_MESSAGES/libidn2.mo /opt/share//locale/pl/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/ja/LC_MESSAGES/libidn2.mo /opt/share//locale/ja/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/da/LC_MESSAGES/libidn2.mo /opt/share//locale/da/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/pt_BR/LC_MESSAGES/libidn2.mo /opt/share//locale/pt_BR/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/hr/LC_MESSAGES/libidn2.mo /opt/share//locale/hr/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/locale/ko/LC_MESSAGES/libidn2.mo /opt/share//locale/ko/LC_MESSAGES/libidn2.mo
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/up-insensitive.png /opt/share//gtk-doc/html/libidn2/up-insensitive.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/libidn2.html /opt/share//gtk-doc/html/libidn2/libidn2.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/index.html /opt/share//gtk-doc/html/libidn2/index.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/api-index-2.1.1.html /opt/share//gtk-doc/html/libidn2/api-index-2.1.1.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/up.png /opt/share//gtk-doc/html/libidn2/up.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/api-index-2.0.0.html /opt/share//gtk-doc/html/libidn2/api-index-2.0.0.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/home.png /opt/share//gtk-doc/html/libidn2/home.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/right-insensitive.png /opt/share//gtk-doc/html/libidn2/right-insensitive.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/left.png /opt/share//gtk-doc/html/libidn2/left.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/api-index-deprecated.html /opt/share//gtk-doc/html/libidn2/api-index-deprecated.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/style.css /opt/share//gtk-doc/html/libidn2/style.css
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/api-index-0.1.html /opt/share//gtk-doc/html/libidn2/api-index-0.1.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/libidn2-idn2.h.html /opt/share//gtk-doc/html/libidn2/libidn2-idn2.h.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/api-index-full.html /opt/share//gtk-doc/html/libidn2/api-index-full.html
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/right.png /opt/share//gtk-doc/html/libidn2/right.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/libidn2.devhelp2 /opt/share//gtk-doc/html/libidn2/libidn2.devhelp2
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/gtk-doc/html/libidn2/left-insensitive.png /opt/share//gtk-doc/html/libidn2/left-insensitive.png
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/info/libidn2.info /opt/share//info/libidn2.info
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/info/dir /opt/share//info/dir
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_ascii_4i.3 /opt/share//man/man3/idn2_to_ascii_4i.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_free.3 /opt/share//man/man3/idn2_free.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_unicode_8zlz.3 /opt/share//man/man3/idn2_to_unicode_8zlz.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_lookup_ul.3 /opt/share//man/man3/idn2_lookup_ul.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_unicode_8z8z.3 /opt/share//man/man3/idn2_to_unicode_8z8z.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_unicode_44i.3 /opt/share//man/man3/idn2_to_unicode_44i.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_strerror_name.3 /opt/share//man/man3/idn2_strerror_name.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_check_version.3 /opt/share//man/man3/idn2_check_version.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_unicode_8z4z.3 /opt/share//man/man3/idn2_to_unicode_8z4z.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_ascii_4z.3 /opt/share//man/man3/idn2_to_ascii_4z.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_ascii_4i2.3 /opt/share//man/man3/idn2_to_ascii_4i2.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_unicode_lzlz.3 /opt/share//man/man3/idn2_to_unicode_lzlz.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_unicode_4z4z.3 /opt/share//man/man3/idn2_to_unicode_4z4z.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_ascii_8z.3 /opt/share//man/man3/idn2_to_ascii_8z.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_register_ul.3 /opt/share//man/man3/idn2_register_ul.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_strerror.3 /opt/share//man/man3/idn2_strerror.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_lookup_u8.3 /opt/share//man/man3/idn2_lookup_u8.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_register_u8.3 /opt/share//man/man3/idn2_register_u8.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man3/idn2_to_ascii_lz.3 /opt/share//man/man3/idn2_to_ascii_lz.3
+🐚 sudo ln -sf /opt/package/libidn2-2.3.4/share/man/man1/idn2.1 /opt/share//man/man1/idn2.1

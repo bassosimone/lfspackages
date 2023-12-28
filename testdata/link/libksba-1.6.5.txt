@@ -1,0 +1,16 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/include
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/include/ksba.h /opt/include//ksba.h
+🐚 sudo install -d /opt/lib
+🐚 sudo install -d /opt/lib//pkgconfig
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/lib/libksba.so.8.14.5 /opt/lib//libksba.so.8.14.5
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/lib/libksba.so /opt/lib//libksba.so
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/lib/libksba.so.8 /opt/lib//libksba.so.8
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/lib/pkgconfig/ksba.pc /opt/lib//pkgconfig/ksba.pc
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/lib/libksba.la /opt/lib//libksba.la
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//info
+🐚 sudo install -d /opt/share//aclocal
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/share/info/dir /opt/share//info/dir
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/share/info/ksba.info /opt/share//info/ksba.info
+🐚 sudo ln -sf /opt/package/libksba-1.6.5/share/aclocal/ksba.m4 /opt/share//aclocal/ksba.m4

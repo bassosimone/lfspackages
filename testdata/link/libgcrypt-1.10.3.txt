@@ -1,0 +1,26 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/bin
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/bin/hmac256 /opt/bin//hmac256
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/bin/libgcrypt-config /opt/bin//libgcrypt-config
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/bin/mpicalc /opt/bin//mpicalc
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/bin/dumpsexp /opt/bin//dumpsexp
+🐚 sudo install -d /opt/include
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/include/gcrypt.h /opt/include//gcrypt.h
+🐚 sudo install -d /opt/lib
+🐚 sudo install -d /opt/lib//pkgconfig
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/lib/libgcrypt.so.20 /opt/lib//libgcrypt.so.20
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/lib/libgcrypt.so /opt/lib//libgcrypt.so
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/lib/libgcrypt.so.20.4.3 /opt/lib//libgcrypt.so.20.4.3
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/lib/libgcrypt.la /opt/lib//libgcrypt.la
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/lib/pkgconfig/libgcrypt.pc /opt/lib//pkgconfig/libgcrypt.pc
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//info
+🐚 sudo install -d /opt/share//aclocal
+🐚 sudo install -d /opt/share//man
+🐚 sudo install -d /opt/share//man/man1
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/share/info/gcrypt.info-1 /opt/share//info/gcrypt.info-1
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/share/info/dir /opt/share//info/dir
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/share/info/gcrypt.info /opt/share//info/gcrypt.info
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/share/info/gcrypt.info-2 /opt/share//info/gcrypt.info-2
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/share/aclocal/libgcrypt.m4 /opt/share//aclocal/libgcrypt.m4
+🐚 sudo ln -sf /opt/package/libgcrypt-1.10.3/share/man/man1/hmac256.1 /opt/share//man/man1/hmac256.1

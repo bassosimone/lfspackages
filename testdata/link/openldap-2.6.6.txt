@@ -1,0 +1,24 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/include
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/ldap.h /opt/include//ldap.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/ldif.h /opt/include//ldif.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/lber.h /opt/include//lber.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/ldap_utf8.h /opt/include//ldap_utf8.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/ldap_schema.h /opt/include//ldap_schema.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/openldap.h /opt/include//openldap.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/slapi-plugin.h /opt/include//slapi-plugin.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/lber_types.h /opt/include//lber_types.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/ldap_features.h /opt/include//ldap_features.h
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/include/ldap_cdefs.h /opt/include//ldap_cdefs.h
+🐚 sudo install -d /opt/lib
+🐚 sudo install -d /opt/lib//pkgconfig
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/liblber.la /opt/lib//liblber.la
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/liblber.so.2 /opt/lib//liblber.so.2
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/libldap.so.2.0.200 /opt/lib//libldap.so.2.0.200
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/liblber.so /opt/lib//liblber.so
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/libldap.so.2 /opt/lib//libldap.so.2
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/libldap.la /opt/lib//libldap.la
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/libldap.so /opt/lib//libldap.so
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/pkgconfig/ldap.pc /opt/lib//pkgconfig/ldap.pc
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/pkgconfig/lber.pc /opt/lib//pkgconfig/lber.pc
+🐚 sudo ln -sf /opt/package/openldap-2.6.6/lib/liblber.so.2.0.200 /opt/lib//liblber.so.2.0.200

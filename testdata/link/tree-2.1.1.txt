@@ -1,0 +1,7 @@
+Thu Dec 28 03:01:36 PM UTC 2023
+🐚 sudo install -d /opt/bin
+🐚 sudo ln -sf /opt/package/tree-2.1.1/bin/tree /opt/bin//tree
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//man
+🐚 sudo install -d /opt/share//man/man1
+🐚 sudo ln -sf /opt/package/tree-2.1.1/share/man/man1/tree.1 /opt/share//man/man1/tree.1

@@ -1,0 +1,19 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/bin
+🐚 sudo ln -sf /opt/package/pass-1.7.4/bin/pass /opt/bin//pass
+🐚 sudo install -d /opt/lib
+🐚 sudo install -d /opt/lib//password-store
+🐚 sudo install -d /opt/lib//password-store/extensions
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//bash-completion
+🐚 sudo install -d /opt/share//bash-completion/completions
+🐚 sudo install -d /opt/share//fish
+🐚 sudo install -d /opt/share//fish/vendor_completions.d
+🐚 sudo install -d /opt/share//man
+🐚 sudo install -d /opt/share//man/man1
+🐚 sudo install -d /opt/share//zsh
+🐚 sudo install -d /opt/share//zsh/site-functions
+🐚 sudo ln -sf /opt/package/pass-1.7.4/share/bash-completion/completions/pass /opt/share//bash-completion/completions/pass
+🐚 sudo ln -sf /opt/package/pass-1.7.4/share/fish/vendor_completions.d/pass.fish /opt/share//fish/vendor_completions.d/pass.fish
+🐚 sudo ln -sf /opt/package/pass-1.7.4/share/man/man1/pass.1 /opt/share//man/man1/pass.1
+🐚 sudo ln -sf /opt/package/pass-1.7.4/share/zsh/site-functions/_pass /opt/share//zsh/site-functions/_pass

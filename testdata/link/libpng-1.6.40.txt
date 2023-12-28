@@ -1,0 +1,31 @@
+Thu Dec 28 03:01:35 PM UTC 2023
+🐚 sudo install -d /opt/bin
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/bin/libpng16-config /opt/bin//libpng16-config
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/bin/libpng-config /opt/bin//libpng-config
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/bin/pngfix /opt/bin//pngfix
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/bin/png-fix-itxt /opt/bin//png-fix-itxt
+🐚 sudo install -d /opt/include
+🐚 sudo install -d /opt/include//libpng16
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/include/pnglibconf.h /opt/include//pnglibconf.h
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/include/png.h /opt/include//png.h
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/include/libpng16/pnglibconf.h /opt/include//libpng16/pnglibconf.h
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/include/libpng16/png.h /opt/include//libpng16/png.h
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/include/libpng16/pngconf.h /opt/include//libpng16/pngconf.h
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/include/pngconf.h /opt/include//pngconf.h
+🐚 sudo install -d /opt/lib
+🐚 sudo install -d /opt/lib//pkgconfig
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/libpng16.la /opt/lib//libpng16.la
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/libpng16.so.16 /opt/lib//libpng16.so.16
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/libpng.la /opt/lib//libpng.la
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/libpng16.so.16.40.0 /opt/lib//libpng16.so.16.40.0
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/libpng16.so /opt/lib//libpng16.so
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/pkgconfig/libpng16.pc /opt/lib//pkgconfig/libpng16.pc
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/pkgconfig/libpng.pc /opt/lib//pkgconfig/libpng.pc
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/lib/libpng.so /opt/lib//libpng.so
+🐚 sudo install -d /opt/share
+🐚 sudo install -d /opt/share//man
+🐚 sudo install -d /opt/share//man/man5
+🐚 sudo install -d /opt/share//man/man3
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/share/man/man5/png.5 /opt/share//man/man5/png.5
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/share/man/man3/libpngpf.3 /opt/share//man/man3/libpngpf.3
+🐚 sudo ln -sf /opt/package/libpng-1.6.40/share/man/man3/libpng.3 /opt/share//man/man3/libpng.3
