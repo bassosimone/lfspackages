@@ -4,6 +4,7 @@ set -euo pipefail
 
 . lib/core.bash
 
+# be user friendly in case of -h or --help is added to the command line
 for arg in "$@"; do
     if [[ "$arg" == "-h" || "$arg" == "--help" ]]; then
         echo ""
