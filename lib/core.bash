@@ -115,12 +115,6 @@ pkg_cli_build() {
     (
         . $dir_name/package.bash
 
-        __destdir=$(pkg_print_destdir)
-        if [[ -d $__destdir ]]; then
-            pkg_lib_info "package $dir_name already installed at $__destdir"
-            return
-        fi
-
         (
             # ensure packages find the /opt alternative root
             pkg_lib_run export PKG_CONFIG_PATH="/opt/lib/pkgconfig:/usr/lib/pkgconfig"
@@ -170,7 +164,23 @@ pkg_cli_link() {
 # pkg_cli_install DIR combines pkg_cli_build and pkg_cli_link
 pkg_cli_install() {
     local dir_name=$1
-    pkg_cli_build $dir_name pkg_cli_link $dir_name # pipelining execution
+
+    if [[ ! -f $dir_name/package.bash ]]; then
+        echo "FATAL: $dir_name/package.bash: no such file or directory" 1>&2
+        exit 1
+    fi
+
+    (
+        . $dir_name/package.bash
+
+        __destdir=$(pkg_print_destdir)
+        if [[ -d $__destdir ]]; then
+            pkg_lib_info "package $dir_name already installed at $__destdir"
+            return
+        fi
+
+        pkg_cli_build $dir_name pkg_cli_link $dir_name # pipelining execution
+    )
 }
 
 # pkg_cli_install_recursive DIR installs the package defined by the
