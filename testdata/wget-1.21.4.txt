@@ -1,0 +1,18 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz
+🐚 echo 81542f5cefb8faacc39bbbc6c82ded80e3e4a88505ae72ea51df27525bcde04c  wget-1.21.4.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf wget-1.21.4.tar.gz
+🐚 cd wget-1.21.4
+🐚 ./configure --prefix=/opt/package/wget-1.21.4
+🐚 make -j8
+🐚 sudo make install
+🐚 sudo find /opt/package/wget-1.21.4/etc -type f -exec mv {} {}.new ;
+🐚 rm -rf

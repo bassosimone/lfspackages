@@ -1,0 +1,18 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://github.com/kkos/oniguruma/releases/download/v6.9.9/onig-6.9.9.tar.gz
+🐚 echo 60162bd3b9fc6f4886d4c7a07925ffd374167732f55dce8c491bfd9cd818a6cf  onig-6.9.9.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf onig-6.9.9.tar.gz
+🐚 cd onig-6.9.9
+🐚 autoreconf -vif
+🐚 ./configure --prefix=/opt/package/oniguruma-6.9.9
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

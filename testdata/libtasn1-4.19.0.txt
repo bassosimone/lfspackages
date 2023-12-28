@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.19.0.tar.gz
+🐚 echo 1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a  libtasn1-4.19.0.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf libtasn1-4.19.0.tar.gz
+🐚 cd libtasn1-4.19.0
+🐚 ./configure --prefix=/opt/package/libtasn1-4.19.0 --disable-static
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

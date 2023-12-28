@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-1.7.1.tar.gz
+🐚 echo 478c9ca129fd2e3443fe27314b455e211e0d8c60bc8ff7df703873deeee580c2  jq-1.7.1.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf jq-1.7.1.tar.gz
+🐚 cd jq-1.7.1
+🐚 ./configure --prefix=/opt/package/jq-1.7.1
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

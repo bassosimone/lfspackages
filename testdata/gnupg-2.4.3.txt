@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.4.3.tar.bz2
+🐚 echo a271ae6d732f6f4d80c258ad9ee88dd9c94c8fdc33c3e45328c4d7c126bd219d  gnupg-2.4.3.tar.bz2
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf gnupg-2.4.3.tar.bz2
+🐚 cd gnupg-2.4.3
+🐚 ./configure --prefix=/opt/package/gnupg-2.4.3 --docdir=/opt/package/gnupg-2.4.3/share/doc/gnupg-2.4.3
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

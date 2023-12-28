@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://rsync.samba.org/ftp/rsync/rsync-3.2.7.tar.gz
+🐚 echo 4e7d9d3f6ed10878c58c5fb724a67dacf4b6aac7340b13e488fb2dc41346f2bb  rsync-3.2.7.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf rsync-3.2.7.tar.gz
+🐚 cd rsync-3.2.7
+🐚 ./configure --prefix=/opt/package/rsync-3.2.7 --disable-lz4 --disable-xxhash --without-included-zlib
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

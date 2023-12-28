@@ -1,0 +1,18 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://downloads.sourceforge.net/project/libpng/libpng16/1.6.40/libpng-1.6.40.tar.xz
+🐚 echo 535b479b2467ff231a3ec6d92a525906fb8ef27978be4f66dbe05d3f3a01b3a1  libpng-1.6.40.tar.xz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf libpng-1.6.40.tar.xz
+🐚 cd libpng-1.6.40
+🐚 ./configure --prefix=/opt/package/libpng-1.6.40
+🐚 make -j8
+🐚 sudo make install
+🐚 sudo rm -f /opt/package/libpng-1.6.40/lib/libpng16.a /opt/package/libpng-1.6.40/lib/libpng.a
+🐚 rm -rf

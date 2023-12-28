@@ -1,0 +1,26 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.6.tgz
+🐚 echo 082e998cf542984d43634442dbe11da860759e510907152ea579bdc42fe39ea0  openldap-2.6.6.tgz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf openldap-2.6.6.tgz
+🐚 cd openldap-2.6.6
+🐚 curl -fsSLO https://www.linuxfromscratch.org/patches/blfs/12.0/openldap-2.6.6-consolidated-1.patch
+🐚 echo bb483c15fe935ae7c89bc1fe85a3f6e1a9df1381103f629d9c9cadaf00d52e34  openldap-2.6.6-consolidated-1.patch
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 patch -Np1 -i openldap-2.6.6-consolidated-1.patch
+🐚 autoconf
+🐚 ./configure --prefix=/opt/package/openldap-2.6.6 --disable-static --enable-versioning=yes --disable-debug --with-tls=openssl --without-cyrus-sasl --without-systemd --enable-dynamic --enable-crypt --disable-spasswd --enable-slapd --enable-modules --enable-rlookups --enable-backends=mod --disable-sql --disable-wt --enable-overlays=mod
+🐚 make -j8 depend
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

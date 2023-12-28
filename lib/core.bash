@@ -27,7 +27,7 @@ pkg_lib_download() {
 pkg_lib_verify() {
     local tarball=$1
     local sha256=$2
-    echo "$sha256  $tarball" >SHA256SUM
+    pkg_lib_run echo "$sha256  $tarball" | pkg_lib_run tee SHA256SUM
     pkg_lib_run cat SHA256SUM
     pkg_lib_run shasum -c SHA256SUM
     pkg_lib_run rm SHA256SUM

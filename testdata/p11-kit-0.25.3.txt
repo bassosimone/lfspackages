@@ -1,0 +1,21 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://github.com/p11-glue/p11-kit/releases/download/0.25.3/p11-kit-0.25.3.tar.xz
+🐚 echo d8ddce1bb7e898986f9d250ccae7c09ce14d82f1009046d202a0eb1b428b2adc  p11-kit-0.25.3.tar.xz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf p11-kit-0.25.3.tar.xz
+🐚 cd p11-kit-0.25.3
+🐚 sed s/if (gi/& \&\& gi != C_GetInterface/ -i p11-kit/modules.c
+🐚 mkdir p11-build
+🐚 cd p11-build
+🐚 meson setup .. --prefix=/opt/package/p11-kit-0.25.3 --buildtype=release -Dtrust_paths=/etc/ssl/cert.pem -Dsystemd=disabled
+🐚 ninja
+🐚 sudo ninja install
+🐚 sudo find /opt/package/p11-kit-0.25.3/etc -type f -exec mv {} {}.new ;
+🐚 rm -rf

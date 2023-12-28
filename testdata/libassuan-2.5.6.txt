@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.6.tar.bz2
+🐚 echo e9fd27218d5394904e4e39788f9b1742711c3e6b41689a31aa3380bd5aa4f426  libassuan-2.5.6.tar.bz2
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf libassuan-2.5.6.tar.bz2
+🐚 cd libassuan-2.5.6
+🐚 ./configure --prefix=/opt/package/libassuan-2.5.6
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

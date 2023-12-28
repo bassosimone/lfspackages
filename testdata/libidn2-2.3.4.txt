@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://ftp.gnu.org/gnu/libidn/libidn2-2.3.4.tar.gz
+🐚 echo 93caba72b4e051d1f8d4f5a076ab63c99b77faee019b72b9783b267986dbb45f  libidn2-2.3.4.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf libidn2-2.3.4.tar.gz
+🐚 cd libidn2-2.3.4
+🐚 ./configure --prefix=/opt/package/libidn2-2.3.4 --disable-static
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

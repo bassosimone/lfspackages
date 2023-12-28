@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://www.gnupg.org/ftp/gcrypt/npth/npth-1.6.tar.bz2
+🐚 echo 1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1  npth-1.6.tar.bz2
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf npth-1.6.tar.bz2
+🐚 cd npth-1.6
+🐚 ./configure --prefix=/opt/package/npth-1.6
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf

@@ -1,0 +1,19 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://ftp.gnu.org/gnu/nettle/nettle-3.9.1.tar.gz
+🐚 echo ccfeff981b0ca71bbd6fbcb054f407c60ffb644389a5be80d6716d5b550c6ce3  nettle-3.9.1.tar.gz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf nettle-3.9.1.tar.gz
+🐚 cd nettle-3.9.1
+🐚 ./configure --prefix=/opt/package/nettle-3.9.1 --disable-static
+🐚 make -j8
+🐚 sudo make install
+🐚 sudo chmod +x /opt/package/nettle-3.9.1/lib/libhogweed.so.6.8
+🐚 sudo chmod +x /opt/package/nettle-3.9.1/lib/libnettle.so.8.8
+🐚 rm -rf

@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+# Make sure we're not going to run builds
+export PKG_LIB_DRY_RUN=:
+
+. lib/core.bash
+
+for script_name in ./ports/*/*/*; do
+    pkg_cli_build $script_name 2>&1 | tee testdata/$(basename $script_name).txt
+done

@@ -1,0 +1,17 @@
+🐚 export PKG_CONFIG_PATH=/opt/lib/pkgconfig:/usr/lib/pkgconfig
+🐚 export CFLAGS=-I/opt/include 
+🐚 export LDFLAGS=-L/opt/lib 
+🐚 mktemp -d
+🐚 cd
+🐚 curl -fsSLO https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.2.tar.xz
+🐚 echo e765e5016ffa9b9dd243e363a0460d577074444ee2491267db2e96c9c2adef77  gnutls-3.8.2.tar.xz
+🐚 tee SHA256SUM
+🐚 cat SHA256SUM
+🐚 shasum -c SHA256SUM
+🐚 rm SHA256SUM
+🐚 tar -xf gnutls-3.8.2.tar.xz
+🐚 cd gnutls-3.8.2
+🐚 ./configure --prefix=/opt/package/gnutls-3.8.2 --docdir=/opt/package/gnutls-3.8.2/share/doc/gnutls-3.8.2 --disable-static --with-default-trust-store-pkcs11=pkcs11:
+🐚 make -j8
+🐚 sudo make install
+🐚 rm -rf
