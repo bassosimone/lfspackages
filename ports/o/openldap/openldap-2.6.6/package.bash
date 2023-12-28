@@ -1,11 +1,11 @@
 __pkg_sha256=082e998cf542984d43634442dbe11da860759e510907152ea579bdc42fe39ea0
 __pkg_name=openldap
 __pkg_version=2.6.6
-__pkg_deps=()
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tgz
 __pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/${__pkg_name}/${__pkg_tarball_name}
+__pkg_deps=()
 __pkg_link_dirs=(include lib) # bare minimum required by gnupg
 __pkg_maybe_copy_persistent_config=()
 
