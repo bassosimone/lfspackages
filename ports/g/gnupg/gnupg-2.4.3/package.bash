@@ -1,8 +1,8 @@
 pkg_print_deps() {
     deps=(
         ./ports/l/libassuan/libassuan-2.5.6
-        ./ports/l/libgcrypt/libgcrypt-1.10.2
-        ./ports/l/libksba/libksba-1.6.4
+        ./ports/l/libgcrypt/libgcrypt-1.10.3
+        ./ports/l/libksba/libksba-1.6.5
         ./ports/n/npth/npth-1.6
     )
     echo "${deps[@]}"
