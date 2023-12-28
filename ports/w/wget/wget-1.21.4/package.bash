@@ -1,6 +1,6 @@
 pkg_print_deps() {
     deps=(
-        ./ports/g/gnutls/gnutls-3.8.1
+        ./ports/g/gnutls/gnutls-3.8.2
         ./ports/l/libidn2/libidn2-2.3.4
     )
     echo "${deps[@]}"
