@@ -1,4 +1,2 @@
-Thu Dec 28 03:13:43 PM UTC 2023
-🐚 sudo install -d /opt/bin
-🐚 sudo ln -sf /opt/package/go-1.20.12/bin/gofmt /opt/bin/gofmt
-🐚 sudo ln -sf /opt/package/go-1.20.12/bin/go /opt/bin/go
+Thu Dec 28 03:18:34 PM UTC 2023
+🐚 __symlink_all /opt/package/go-1.20.12/bin /opt/bin

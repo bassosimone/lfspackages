@@ -1,16 +1,5 @@
-Thu Dec 28 03:13:44 PM UTC 2023
-🐚 sudo install -d /opt/bin
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/bin/qrencode /opt/bin/qrencode
-🐚 sudo install -d /opt/include
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/include/qrencode.h /opt/include/qrencode.h
-🐚 sudo install -d /opt/lib
-🐚 sudo install -d /opt/lib/pkgconfig
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/lib/libqrencode.la /opt/lib/libqrencode.la
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/lib/libqrencode.so.4 /opt/lib/libqrencode.so.4
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/lib/libqrencode.so.4.1.1 /opt/lib/libqrencode.so.4.1.1
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/lib/pkgconfig/libqrencode.pc /opt/lib/pkgconfig/libqrencode.pc
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/lib/libqrencode.so /opt/lib/libqrencode.so
-🐚 sudo install -d /opt/share
-🐚 sudo install -d /opt/share/man
-🐚 sudo install -d /opt/share/man/man1
-🐚 sudo ln -sf /opt/package/qrencode-4.1.1/share/man/man1/qrencode.1 /opt/share/man/man1/qrencode.1
+Thu Dec 28 03:18:34 PM UTC 2023
+🐚 __symlink_all /opt/package/qrencode-4.1.1/bin /opt/bin
+🐚 __symlink_all /opt/package/qrencode-4.1.1/include /opt/include
+🐚 __symlink_all /opt/package/qrencode-4.1.1/lib /opt/lib
+🐚 __symlink_all /opt/package/qrencode-4.1.1/share /opt/share

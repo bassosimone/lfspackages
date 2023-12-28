@@ -1,24 +1,5 @@
-Thu Dec 28 03:13:43 PM UTC 2023
-🐚 sudo install -d /opt/bin
-🐚 sudo ln -sf /opt/package/jq-1.7.1/bin/jq /opt/bin/jq
-🐚 sudo install -d /opt/include
-🐚 sudo ln -sf /opt/package/jq-1.7.1/include/jq.h /opt/include/jq.h
-🐚 sudo ln -sf /opt/package/jq-1.7.1/include/jv.h /opt/include/jv.h
-🐚 sudo install -d /opt/lib
-🐚 sudo install -d /opt/lib/pkgconfig
-🐚 sudo ln -sf /opt/package/jq-1.7.1/lib/libjq.so.1 /opt/lib/libjq.so.1
-🐚 sudo ln -sf /opt/package/jq-1.7.1/lib/libjq.so.1.0.4 /opt/lib/libjq.so.1.0.4
-🐚 sudo ln -sf /opt/package/jq-1.7.1/lib/libjq.so /opt/lib/libjq.so
-🐚 sudo ln -sf /opt/package/jq-1.7.1/lib/pkgconfig/libjq.pc /opt/lib/pkgconfig/libjq.pc
-🐚 sudo ln -sf /opt/package/jq-1.7.1/lib/libjq.la /opt/lib/libjq.la
-🐚 sudo ln -sf /opt/package/jq-1.7.1/lib/libjq.a /opt/lib/libjq.a
-🐚 sudo install -d /opt/share
-🐚 sudo install -d /opt/share/doc
-🐚 sudo install -d /opt/share/doc/jq
-🐚 sudo install -d /opt/share/man
-🐚 sudo install -d /opt/share/man/man1
-🐚 sudo ln -sf /opt/package/jq-1.7.1/share/doc/jq/NEWS.md /opt/share/doc/jq/NEWS.md
-🐚 sudo ln -sf /opt/package/jq-1.7.1/share/doc/jq/README.md /opt/share/doc/jq/README.md
-🐚 sudo ln -sf /opt/package/jq-1.7.1/share/doc/jq/COPYING /opt/share/doc/jq/COPYING
-🐚 sudo ln -sf /opt/package/jq-1.7.1/share/doc/jq/AUTHORS /opt/share/doc/jq/AUTHORS
-🐚 sudo ln -sf /opt/package/jq-1.7.1/share/man/man1/jq.1 /opt/share/man/man1/jq.1
+Thu Dec 28 03:18:34 PM UTC 2023
+🐚 __symlink_all /opt/package/jq-1.7.1/bin /opt/bin
+🐚 __symlink_all /opt/package/jq-1.7.1/include /opt/include
+🐚 __symlink_all /opt/package/jq-1.7.1/lib /opt/lib
+🐚 __symlink_all /opt/package/jq-1.7.1/share /opt/share

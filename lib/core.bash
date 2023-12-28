@@ -39,9 +39,7 @@ pkg_lib_extract() {
     pkg_lib_run tar -xf $tarball
 }
 
-#doc: pkg_lib_symlink_all SOURCE DEST creates a directory in DEST
-#doc: for each directory in SOURCE and then links files.
-pkg_lib_symlink_all() {
+__symlink_all() {
     local source=$1
     local dest=$2
 
@@ -57,10 +55,13 @@ pkg_lib_symlink_all() {
     done
 }
 
-#doc: pkg_lib_maybe_copy_etc_all SOURCE DEST creates a directory in DEST
-#doc: for each directory in SOURCE and then copies files in there if they
-#doc: do not exist; otherwise, it creates .new files.
-pkg_lib_maybe_copy_etc_all() {
+#doc: pkg_lib_symlink_all SOURCE DEST creates a directory in DEST
+#doc: for each directory in SOURCE and then links files.
+pkg_lib_symlink_all() {
+    pkg_lib_run __symlink_all "$@"
+}
+
+__maybe_copy_etc_all() {
     local source=$1
     local dest=$2
 
@@ -91,6 +92,13 @@ pkg_lib_maybe_copy_etc_all() {
         # symlink /opt/package/wget-1.21.4/etc/wgetrc to /opt/etc/wgetrc
         pkg_lib_run sudo ln -sf $destname ${file%%.new}
     done
+}
+
+#doc: pkg_lib_maybe_copy_etc_all SOURCE DEST creates a directory in DEST
+#doc: for each directory in SOURCE and then copies files in there if they
+#doc: do not exist; otherwise, it creates .new files.
+pkg_lib_maybe_copy_etc_all() {
+    pkg_lib_run __maybe_copy_etc_all "$@"
 }
 
 # pkg_cli_build DIR [...] builds the package identified by DIR. Any
