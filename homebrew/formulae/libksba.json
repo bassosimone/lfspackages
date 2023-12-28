@@ -1,2 +1,163 @@
-{"name":"libksba","full_name":"libksba","tap":"homebrew/core","oldname":null,"oldnames":[],"aliases":[],"versioned_formulae":[],"desc":"X.509 and CMS library","license":"LGPL-3.0-or-later or GPL-2.0-or-later","homepage":"https://www.gnupg.org/related_software/libksba/","versions":{"stable":"1.6.5","head":null,"bottle":true},"urls":{"stable":{"url":"https://gnupg.org/ftp/gcrypt/libksba/libksba-1.6.5.tar.bz2","tag":null,"revision":null,"using":null,"checksum":"a564628c574c99287998753f98d750babd91a4e9db451f46ad140466ef2a6d16"}},"revision":0,"version_scheme":0,"bottle":{"stable":{"rebuild":0,"root_url":"https://ghcr.io/v2/homebrew/core","files":{"arm64_sonoma":{"cellar":":any","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:93312a56b490f76c4b604c33e632b422265c34147f1f9ad55067b3ef7fd0d099","sha256":"93312a56b490f76c4b604c33e632b422265c34147f1f9ad55067b3ef7fd0d099"},"arm64_ventura":{"cellar":":any","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:81f002affe891ceaaa0242e5e7199b5e8367eb07fe722025193daa32f3946553","sha256":"81f002affe891ceaaa0242e5e7199b5e8367eb07fe722025193daa32f3946553"},"arm64_monterey":{"cellar":":any","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:9ab2c0432db8783f4d9ffd3f53ecfefb1a7684ef832d2e821b2109aec061d19b","sha256":"9ab2c0432db8783f4d9ffd3f53ecfefb1a7684ef832d2e821b2109aec061d19b"},"sonoma":{"cellar":":any","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:db3d3ccc012b420632652c7215040cae34d40d5a26ebcd0dbe5dc17a37c0891e","sha256":"db3d3ccc012b420632652c7215040cae34d40d5a26ebcd0dbe5dc17a37c0891e"},"ventura":{"cellar":":any","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:93433a6a85878e91204e7d3af6af33fb4228e0531aba5eac09d03e82625c8361","sha256":"93433a6a85878e91204e7d3af6af33fb4228e0531aba5eac09d03e82625c8361"},"monterey":{"cellar":":any","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:a8155dd662463493099fff85ce9b5b5808bd64256ccdaa05fc7eee38f4a2da3e","sha256":"a8155dd662463493099fff85ce9b5b5808bd64256ccdaa05fc7eee38f4a2da3e"},"x86_64_linux":{"cellar":":any_skip_relocation","url":"https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:78933dcda1ee84b6366f13bb712298ad2453080ab1ad26d3ac008fa39f3dcc36","sha256":"78933dcda1ee84b6366f13bb712298ad2453080ab1ad26d3ac008fa39f3dcc36"}}}},"pour_bottle_only_if":null,"keg_only":false,"keg_only_reason":null,"options":[],"build_dependencies":[],"dependencies":["libgpg-error"],"test_dependencies":[],"recommended_dependencies":[],"optional_dependencies":[],"uses_from_macos":[],"uses_from_macos_bounds":[],"requirements":[],"conflicts_with":[],"conflicts_with_reasons":[],"link_overwrite":[],"caveats":null,"installed":[{"version":"1.6.5","used_options":[],"built_as_bottle":true,"poured_from_bottle":true,"time":1702715754,"runtime_dependencies":[{"full_name":"gettext","version":"0.22.4","revision":0,"pkg_version":"0.22.4","declared_directly":false},{"full_name":"libgpg-error","version":"1.47","revision":0,"pkg_version":"1.47","declared_directly":true}],"installed_as_dependency":true,"installed_on_request":false}],"linked_keg":"1.6.5","pinned":false,"outdated":false,"deprecated":false,"deprecation_date":null,"deprecation_reason":null,"disabled":false,"disable_date":null,"disable_reason":null,"post_install_defined":false,"service":null,"tap_git_head":"9147bffaaccc14c71988a4e227f73af3a30b7469","ruby_source_path":"Formula/lib/libksba.rb","ruby_source_checksum":{"sha256":"eca53b846834ccf852fd34507637c9379aafa8064f16750aa2944260edb044f7"},"variations":{},"analytics":{"install":{"30d":{"libksba":35891},"90d":{"libksba":96914},"365d":{"libksba":242589}},"install_on_request":{"30d":{"libksba":10604},"90d":{"libksba":29964},"365d":{"libksba":80477}},"build_error":{"30d":{"libksba":0}}},
-"generated_date":"2023-12-28"}
+{
+    "name": "libksba",
+    "full_name": "libksba",
+    "tap": "homebrew/core",
+    "oldname": null,
+    "oldnames": [],
+    "aliases": [],
+    "versioned_formulae": [],
+    "desc": "X.509 and CMS library",
+    "license": "LGPL-3.0-or-later or GPL-2.0-or-later",
+    "homepage": "https://www.gnupg.org/related_software/libksba/",
+    "versions": {
+        "stable": "1.6.5",
+        "head": null,
+        "bottle": true
+    },
+    "urls": {
+        "stable": {
+            "url": "https://gnupg.org/ftp/gcrypt/libksba/libksba-1.6.5.tar.bz2",
+            "tag": null,
+            "revision": null,
+            "using": null,
+            "checksum": "a564628c574c99287998753f98d750babd91a4e9db451f46ad140466ef2a6d16"
+        }
+    },
+    "revision": 0,
+    "version_scheme": 0,
+    "bottle": {
+        "stable": {
+            "rebuild": 0,
+            "root_url": "https://ghcr.io/v2/homebrew/core",
+            "files": {
+                "arm64_sonoma": {
+                    "cellar": ":any",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:93312a56b490f76c4b604c33e632b422265c34147f1f9ad55067b3ef7fd0d099",
+                    "sha256": "93312a56b490f76c4b604c33e632b422265c34147f1f9ad55067b3ef7fd0d099"
+                },
+                "arm64_ventura": {
+                    "cellar": ":any",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:81f002affe891ceaaa0242e5e7199b5e8367eb07fe722025193daa32f3946553",
+                    "sha256": "81f002affe891ceaaa0242e5e7199b5e8367eb07fe722025193daa32f3946553"
+                },
+                "arm64_monterey": {
+                    "cellar": ":any",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:9ab2c0432db8783f4d9ffd3f53ecfefb1a7684ef832d2e821b2109aec061d19b",
+                    "sha256": "9ab2c0432db8783f4d9ffd3f53ecfefb1a7684ef832d2e821b2109aec061d19b"
+                },
+                "sonoma": {
+                    "cellar": ":any",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:db3d3ccc012b420632652c7215040cae34d40d5a26ebcd0dbe5dc17a37c0891e",
+                    "sha256": "db3d3ccc012b420632652c7215040cae34d40d5a26ebcd0dbe5dc17a37c0891e"
+                },
+                "ventura": {
+                    "cellar": ":any",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:93433a6a85878e91204e7d3af6af33fb4228e0531aba5eac09d03e82625c8361",
+                    "sha256": "93433a6a85878e91204e7d3af6af33fb4228e0531aba5eac09d03e82625c8361"
+                },
+                "monterey": {
+                    "cellar": ":any",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:a8155dd662463493099fff85ce9b5b5808bd64256ccdaa05fc7eee38f4a2da3e",
+                    "sha256": "a8155dd662463493099fff85ce9b5b5808bd64256ccdaa05fc7eee38f4a2da3e"
+                },
+                "x86_64_linux": {
+                    "cellar": ":any_skip_relocation",
+                    "url": "https://ghcr.io/v2/homebrew/core/libksba/blobs/sha256:78933dcda1ee84b6366f13bb712298ad2453080ab1ad26d3ac008fa39f3dcc36",
+                    "sha256": "78933dcda1ee84b6366f13bb712298ad2453080ab1ad26d3ac008fa39f3dcc36"
+                }
+            }
+        }
+    },
+    "pour_bottle_only_if": null,
+    "keg_only": false,
+    "keg_only_reason": null,
+    "options": [],
+    "build_dependencies": [],
+    "dependencies": [
+        "libgpg-error"
+    ],
+    "test_dependencies": [],
+    "recommended_dependencies": [],
+    "optional_dependencies": [],
+    "uses_from_macos": [],
+    "uses_from_macos_bounds": [],
+    "requirements": [],
+    "conflicts_with": [],
+    "conflicts_with_reasons": [],
+    "link_overwrite": [],
+    "caveats": null,
+    "installed": [
+        {
+            "version": "1.6.5",
+            "used_options": [],
+            "built_as_bottle": true,
+            "poured_from_bottle": true,
+            "time": 1702715754,
+            "runtime_dependencies": [
+                {
+                    "full_name": "gettext",
+                    "version": "0.22.4",
+                    "revision": 0,
+                    "pkg_version": "0.22.4",
+                    "declared_directly": false
+                },
+                {
+                    "full_name": "libgpg-error",
+                    "version": "1.47",
+                    "revision": 0,
+                    "pkg_version": "1.47",
+                    "declared_directly": true
+                }
+            ],
+            "installed_as_dependency": true,
+            "installed_on_request": false
+        }
+    ],
+    "linked_keg": "1.6.5",
+    "pinned": false,
+    "outdated": false,
+    "deprecated": false,
+    "deprecation_date": null,
+    "deprecation_reason": null,
+    "disabled": false,
+    "disable_date": null,
+    "disable_reason": null,
+    "post_install_defined": false,
+    "service": null,
+    "tap_git_head": "9147bffaaccc14c71988a4e227f73af3a30b7469",
+    "ruby_source_path": "Formula/lib/libksba.rb",
+    "ruby_source_checksum": {
+        "sha256": "eca53b846834ccf852fd34507637c9379aafa8064f16750aa2944260edb044f7"
+    },
+    "variations": {},
+    "analytics": {
+        "install": {
+            "30d": {
+                "libksba": 35891
+            },
+            "90d": {
+                "libksba": 96914
+            },
+            "365d": {
+                "libksba": 242589
+            }
+        },
+        "install_on_request": {
+            "30d": {
+                "libksba": 10604
+            },
+            "90d": {
+                "libksba": 29964
+            },
+            "365d": {
+                "libksba": 80477
+            }
+        },
+        "build_error": {
+            "30d": {
+                "libksba": 0
+            }
+        }
+    },
+    "generated_date": "2023-12-28"
+}

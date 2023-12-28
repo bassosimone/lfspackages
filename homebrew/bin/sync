@@ -14,5 +14,9 @@ for dir in ./ports/*/*; do
     pkg_lib_run curl -fsSL -o ./homebrew/formulae/$formula.json \
         https://formulae.brew.sh/api/formula/$formula.json
 
+    # note: json.tool invoked like this will format in place
+    pkg_lib_run python3 -m json.tool ./homebrew/formulae/$formula.json \
+        ./homebrew/formulae/$formula.json
+
     pkg_lib_run sleep 10
 done
