@@ -180,3 +180,20 @@ pkg_cli_install_recursive() {
 
     pkg_cli_install $dir_name
 }
+
+# pkg_cli_printdeps DIR prints all the deps of a package at DIR.
+pkg_cli_printdeps() (
+    local dir_name=$1
+
+    if [[ ! -f $dir_name/package.bash ]]; then
+        echo "FATAL: $dir_name/package.bash: no such file or directory" 1>&2
+        exit 1
+    fi
+
+    . $dir_name/package.bash
+
+    for dep in $(pkg_print_deps); do
+        echo "$dep"
+        pkg_cli_printdeps $dep
+    done
+)
