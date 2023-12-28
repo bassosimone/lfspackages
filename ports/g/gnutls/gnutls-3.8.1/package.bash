@@ -2,7 +2,7 @@ pkg_print_deps() {
     deps=(
         ./ports/l/libunistring/libunistring-1.1
         ./ports/n/nettle/nettle-3.9.1
-        ./ports/p/p11-kit/p11-kit-0.25.0
+        ./ports/p/p11-kit/p11-kit-0.25.3
     )
     echo "${deps[@]}"
 }
