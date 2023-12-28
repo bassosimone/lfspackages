@@ -4,7 +4,7 @@ __pkg_version=1.21.4
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.gz
-__pkg_tarball_url=https://ftp.gnu.org/gnu/wget/${__pkg_tarball_name}
+__pkg_tarball_url=https://ftp.gnu.org/gnu/${__pkg_name}/${__pkg_tarball_name}
 __pkg_configure_extra_args=()
 __pkg_build_type=autotools
 __pkg_deps=(
@@ -16,5 +16,5 @@ __pkg_maybe_copy_persistent_config=(etc)
 
 pkg_build() {
     pkg_build_autotools
-    pkg_lib_run sudo find /opt/package/wget-1.21.4/etc -type f -exec mv {} {}.new \;
+    pkg_lib_run sudo find ${__pkg_install_prefix}/${__pkg_distro_name}/etc -type f -exec mv {} {}.new \;
 }

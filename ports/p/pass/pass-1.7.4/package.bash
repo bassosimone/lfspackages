@@ -20,5 +20,5 @@ pkg_build() {
 
     pkg_lib_run cd ${__pkg_src_name}
 
-    pkg_lib_run sudo make PREFIX=/opt/package/${__pkg_distro_name} WITH_ALLCOMP=yes install
+    pkg_lib_run sudo make PREFIX=${__pkg_install_prefix}/${__pkg_distro_name} WITH_ALLCOMP=yes install
 }

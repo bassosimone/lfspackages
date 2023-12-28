@@ -4,7 +4,7 @@ __pkg_version=1.6.40
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.xz
-__pkg_tarball_url=https://downloads.sourceforge.net/project/libpng/libpng16/${__pkg_version}/${__pkg_tarball_name}
+__pkg_tarball_url=https://downloads.sourceforge.net/project/${__pkg_name}/libpng16/${__pkg_version}/${__pkg_tarball_name}
 __pkg_configure_extra_args=()
 __pkg_deps=()
 __pkg_link_dirs=(bin include lib share)
@@ -12,5 +12,5 @@ __pkg_maybe_copy_persistent_config=()
 
 pkg_build() {
     pkg_build_autotools
-    pkg_lib_run sudo rm -f /opt/package/libpng-1.6.40/lib/libpng{16,}.a
+    pkg_lib_run sudo rm -f ${__pkg_install_prefix}/${__pkg_distro_name}/lib/libpng{16,}.a
 }

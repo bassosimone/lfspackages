@@ -4,10 +4,10 @@ __pkg_version=1.1
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.xz
-__pkg_tarball_url=https://ftp.gnu.org/gnu/libunistring/${__pkg_tarball_name}
+__pkg_tarball_url=https://ftp.gnu.org/gnu/${__pkg_name}/${__pkg_tarball_name}
 __pkg_configure_extra_args=(
     --disable-static
-    --docdir=/opt/package/${__pkg_distro_name}/share/doc/${__pkg_distro_name}
+    --docdir=${__pkg_install_prefix}/${__pkg_distro_name}/share/doc/${__pkg_distro_name}
 )
 __pkg_build_type=autotools
 __pkg_deps=()

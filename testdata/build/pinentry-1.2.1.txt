@@ -4,8 +4,8 @@
 🐚 mktemp -d
 🐚 cd
 🐚 curl -fsSLO https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.2.1.tar.bz2
-🐚 tee SHA256SUM
 🐚 echo 457a185e5a85238fb945a955dc6352ab962dc8b48720b62fc9fa48c7540a4067  pinentry-1.2.1.tar.bz2
+🐚 tee SHA256SUM
 🐚 cat SHA256SUM
 🐚 shasum -c SHA256SUM
 🐚 rm SHA256SUM

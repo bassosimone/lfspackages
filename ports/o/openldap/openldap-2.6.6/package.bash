@@ -3,7 +3,7 @@ pkg_print_deps() {
 }
 
 pkg_print_destdir() {
-    echo "/opt/package/openldap-2.6.6"
+    echo "${__pkg_install_prefix}/openldap-2.6.6"
 }
 
 pkg_build() {
@@ -20,7 +20,7 @@ pkg_build() {
 
     pkg_lib_run autoconf
 
-    pkg_lib_run ./configure --prefix=/opt/package/openldap-2.6.6 \
+    pkg_lib_run ./configure --prefix=${__pkg_install_prefix}/openldap-2.6.6 \
         --disable-static \
         --enable-versioning=yes \
         --disable-debug \
@@ -48,6 +48,6 @@ pkg_build() {
 pkg_link() {
     # Note: installing the minimum required by gnupg
     for dirname in include lib; do
-        pkg_lib_symlink_all /opt/package/openldap-2.6.6/$dirname /opt/$dirname
+        pkg_lib_symlink_all ${__pkg_install_prefix}/openldap-2.6.6/$dirname ${__pkg_link_prefix}/$dirname
     done
 }

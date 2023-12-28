@@ -6,7 +6,7 @@ pkg_print_deps() {
 }
 
 pkg_print_destdir() {
-    echo "/opt/package/p11-kit-0.25.3"
+    echo "${__pkg_install_prefix}/p11-kit-0.25.3"
 }
 
 pkg_build() {
@@ -22,7 +22,7 @@ pkg_build() {
     pkg_lib_run cd p11-build
 
     pkg_lib_run meson setup .. \
-        --prefix=/opt/package/p11-kit-0.25.3 \
+        --prefix=${__pkg_install_prefix}/p11-kit-0.25.3 \
         --buildtype=release \
         -Dtrust_paths=/etc/ssl/cert.pem \
         -Dsystemd=disabled
@@ -30,13 +30,13 @@ pkg_build() {
     pkg_lib_run ninja
 
     pkg_lib_run sudo ninja install
-    pkg_lib_run sudo find /opt/package/p11-kit-0.25.3/etc -type f -exec mv {} {}.new \;
+    pkg_lib_run sudo find ${__pkg_install_prefix}/p11-kit-0.25.3/etc -type f -exec mv {} {}.new \;
 }
 
 pkg_link() {
     for dirname in bin include lib libexec share; do
-        pkg_lib_symlink_all /opt/package/p11-kit-0.25.3/$dirname /opt/$dirname
+        pkg_lib_symlink_all ${__pkg_install_prefix}/p11-kit-0.25.3/$dirname ${__pkg_link_prefix}/$dirname
     done
 
-    pkg_lib_maybe_copy_etc_all /opt/package/p11-kit-0.25.3/etc /opt/etc
+    pkg_lib_maybe_copy_etc_all ${__pkg_install_prefix}/p11-kit-0.25.3/etc ${__pkg_link_prefix}/etc
 }

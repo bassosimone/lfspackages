@@ -4,9 +4,9 @@ __pkg_version=2.4.3
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.bz2
-__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/gnupg/${__pkg_tarball_name}
+__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/${__pkg_name}/${__pkg_tarball_name}
 __pkg_configure_extra_args=(
-    --docdir=/opt/package/${__pkg_distro_name}/share/doc/${__pkg_distro_name}
+    --docdir=${__pkg_install_prefix}/${__pkg_distro_name}/share/doc/${__pkg_distro_name}
 )
 __pkg_build_type=autotools
 __pkg_deps=(

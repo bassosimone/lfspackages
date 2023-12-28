@@ -4,7 +4,7 @@ __pkg_version=1.2.1
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.bz2
-__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/pinentry/${__pkg_tarball_name}
+__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/${__pkg_name}/${__pkg_tarball_name}
 __pkg_configure_extra_args=(
     --enable-pinentry-tty
 )

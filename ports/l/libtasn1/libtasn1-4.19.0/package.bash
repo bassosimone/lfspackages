@@ -4,7 +4,7 @@ __pkg_version=4.19.0
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.gz
-__pkg_tarball_url=https://ftp.gnu.org/gnu/libtasn1/${__pkg_tarball_name}
+__pkg_tarball_url=https://ftp.gnu.org/gnu/${__pkg_name}/${__pkg_tarball_name}
 __pkg_configure_extra_args=(
     --disable-static
 )

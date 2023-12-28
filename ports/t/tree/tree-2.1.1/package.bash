@@ -4,7 +4,7 @@ __pkg_version=2.1.1
 __pkg_distro_name=${__pkg_name}-${__pkg_version}
 __pkg_src_name=${__pkg_name}-${__pkg_version}
 __pkg_tarball_name=${__pkg_version}.tar.gz
-__pkg_tarball_url=https://github.com/Old-Man-Programmer/tree/archive/refs/tags/${__pkg_tarball_name}
+__pkg_tarball_url=https://github.com/Old-Man-Programmer/${__pkg_name}/archive/refs/tags/${__pkg_tarball_name}
 __pkg_deps=()
 __pkg_link_dirs=(bin share)
 __pkg_maybe_copy_persistent_config=()
@@ -19,7 +19,7 @@ pkg_build() {
     pkg_lib_run make -j$(nproc)
 
     pkg_lib_run sudo make \
-        MANDIR=/opt/package/${__pkg_distro_name}/share/man \
-        PREFIX=/opt/package/${__pkg_distro_name} \
+        MANDIR=${__pkg_install_prefix}/${__pkg_distro_name}/share/man \
+        PREFIX=${__pkg_install_prefix}/${__pkg_distro_name} \
         install
 }
