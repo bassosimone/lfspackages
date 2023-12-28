@@ -1,30 +1,16 @@
-pkg_print_deps() {
-    deps=(
-        ./ports/l/libunistring/libunistring-1.1
-    )
-    echo "${deps[@]}"
-}
-
-pkg_print_destdir() {
-    echo "/opt/package/libidn2-2.3.4"
-}
-
-pkg_build() {
-    pkg_lib_download https://ftp.gnu.org/gnu/libidn/libidn2-2.3.4.tar.gz
-    pkg_lib_verify libidn2-2.3.4.tar.gz 93caba72b4e051d1f8d4f5a076ab63c99b77faee019b72b9783b267986dbb45f
-    pkg_lib_extract libidn2-2.3.4.tar.gz
-
-    pkg_lib_run cd libidn2-2.3.4
-
-    pkg_lib_run ./configure --prefix=/opt/package/libidn2-2.3.4 --disable-static
-
-    pkg_lib_run make -j$(nproc)
-
-    pkg_lib_run sudo make install
-}
-
-pkg_link() {
-    for dirname in bin include lib share; do
-        pkg_lib_symlink_all /opt/package/libidn2-2.3.4/$dirname /opt/$dirname
-    done
-}
+__pkg_sha256=93caba72b4e051d1f8d4f5a076ab63c99b77faee019b72b9783b267986dbb45f
+__pkg_name=libidn2
+__pkg_version=2.3.4
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.gz
+__pkg_tarball_url=https://ftp.gnu.org/gnu/libidn/${__pkg_tarball_name}
+__pkg_configure_extra_args=(
+    --disable-static
+)
+__pkg_build_type=autotools
+__pkg_deps=(
+    ./ports/l/libunistring/libunistring-1.1
+)
+__pkg_link_dirs=(bin include lib share)
+__pkg_maybe_copy_persistent_config=()

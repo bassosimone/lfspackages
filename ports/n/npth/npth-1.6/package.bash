@@ -1,26 +1,12 @@
-pkg_print_deps() {
-    echo ""
-}
-
-pkg_print_destdir() {
-    echo "/opt/package/npth-1.6"
-}
-
-pkg_build() {
-    pkg_lib_download https://www.gnupg.org/ftp/gcrypt/npth/npth-1.6.tar.bz2
-    pkg_lib_verify npth-1.6.tar.bz2 1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1
-    pkg_lib_extract npth-1.6.tar.bz2
-
-    pkg_lib_run cd npth-1.6
-
-    pkg_lib_run ./configure --prefix=/opt/package/npth-1.6
-    pkg_lib_run make -j$(nproc)
-
-    pkg_lib_run sudo make install
-}
-
-pkg_link() {
-    for dirname in bin include lib share; do
-        pkg_lib_symlink_all /opt/package/npth-1.6/$dirname /opt/$dirname
-    done
-}
+__pkg_sha256=1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1
+__pkg_name=npth
+__pkg_version=1.6
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.bz2
+__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/npth/${__pkg_tarball_name}
+__pkg_configure_extra_args=()
+__pkg_build_type=autotools
+__pkg_deps=()
+__pkg_link_dirs=(bin include lib share)
+__pkg_maybe_copy_persistent_config=()
