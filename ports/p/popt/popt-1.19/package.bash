@@ -28,7 +28,7 @@ pkg_build() {
 }
 
 pkg_link() {
-    for dirname in bin include lib share; do
+    for dirname in include lib share; do
         pkg_lib_symlink_all /opt/package/${__pkg_distro_name}/$dirname /opt/$dirname
     done
 }
