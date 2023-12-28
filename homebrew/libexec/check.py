@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+"""
+Ensures that packages are in sync with homebrew. You need to
+periodically run ./homebrew/libexec/sync to refresh information
+about packages managed by homebrew.
+"""
+
 import glob
 import json
 import os.path
