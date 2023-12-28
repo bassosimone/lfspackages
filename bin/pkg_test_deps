@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+# Make sure we're not going to link the package
+export PKG_LIB_DRY_RUN=:
+
+. lib/core.bash
+
+for script_name in ./ports/*/*/*; do
+    output=testdata/deps/$(basename $script_name).txt
+    date -u >$output
+    for dep in $(pkg_cli_printdeps $script_name); do
+        echo $dep | tee -a $output
+    done
+    sort $output
+done

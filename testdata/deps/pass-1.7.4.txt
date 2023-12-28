@@ -1,0 +1,12 @@
+Thu Dec 28 03:59:08 PM UTC 2023
+./ports/g/gnupg/gnupg-2.4.3
+./ports/l/libassuan/libassuan-2.5.6
+./ports/l/libgpg-error/libgpg-error-1.47
+./ports/l/libgcrypt/libgcrypt-1.10.3
+./ports/l/libgpg-error/libgpg-error-1.47
+./ports/l/libksba/libksba-1.6.5
+./ports/l/libgpg-error/libgpg-error-1.47
+./ports/n/npth/npth-1.6
+./ports/q/qrencode/qrencode-4.1.1
+./ports/l/libpng/libpng-1.6.40
+./ports/t/tree/tree-2.1.1
