@@ -8,7 +8,8 @@ export PKG_LIB_DRY_RUN=:
 
 for script_name in ./ports/*/*/*; do
     output=testdata/deps/$(basename $script_name).txt
-    date -u >$output
+    rm -rf $output
+    touch $output
     for dep in $(pkg_cli_printdeps $script_name); do
         echo $dep | tee -a $output
     done

@@ -1,3 +1,2 @@
-Thu Dec 28 03:18:34 PM UTC 2023
 🐚 __symlink_all /opt/package/pinentry-1.2.1/bin /opt/bin
 🐚 __symlink_all /opt/package/pinentry-1.2.1/share /opt/share

@@ -113,6 +113,7 @@ pkg_cli_build() {
     fi
 
     (
+        . lib/basepackage.bash
         . $dir_name/package.bash
 
         (
@@ -149,6 +150,7 @@ pkg_cli_link() {
     fi
 
     (
+        . lib/basepackage.bash
         . $dir_name/package.bash
         pkg_link
     )
@@ -164,6 +166,7 @@ pkg_cli_install() {
     fi
 
     (
+        . lib/basepackage.bash
         . $dir_name/package.bash
 
         __destdir=$(pkg_print_destdir)
@@ -187,6 +190,7 @@ pkg_cli_install_recursive() {
     fi
 
     (
+        . lib/basepackage.bash
         . $dir_name/package.bash
 
         for dependency in $(pkg_print_deps); do
@@ -208,6 +212,7 @@ pkg_cli_printdeps() (
         exit 1
     fi
 
+    . lib/basepackage.bash
     . $dir_name/package.bash
 
     for dep in $(pkg_print_deps); do

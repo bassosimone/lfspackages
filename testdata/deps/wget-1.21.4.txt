@@ -1,4 +1,3 @@
-Thu Dec 28 03:59:08 PM UTC 2023
 ./ports/g/gnutls/gnutls-3.8.2
 ./ports/l/libunistring/libunistring-1.1
 ./ports/n/nettle/nettle-3.9.1

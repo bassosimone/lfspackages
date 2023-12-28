@@ -1,29 +1,14 @@
-pkg_print_deps() {
-    deps=(
-        ./ports/l/libgpg-error/libgpg-error-1.47
-    )
-    echo "${deps[@]}"
-}
-
-pkg_print_destdir() {
-    echo "/opt/package/libassuan-2.5.6"
-}
-
-pkg_build() {
-    pkg_lib_download https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.6.tar.bz2
-    pkg_lib_verify libassuan-2.5.6.tar.bz2 e9fd27218d5394904e4e39788f9b1742711c3e6b41689a31aa3380bd5aa4f426
-    pkg_lib_extract libassuan-2.5.6.tar.bz2
-
-    pkg_lib_run cd libassuan-2.5.6
-
-    pkg_lib_run ./configure --prefix=/opt/package/libassuan-2.5.6
-    pkg_lib_run make -j$(nproc)
-
-    pkg_lib_run sudo make install
-}
-
-pkg_link() {
-    for dirname in bin include lib share; do
-        pkg_lib_symlink_all /opt/package/libassuan-2.5.6/$dirname /opt/$dirname
-    done
-}
+__pkg_sha256=e9fd27218d5394904e4e39788f9b1742711c3e6b41689a31aa3380bd5aa4f426
+__pkg_name=libassuan
+__pkg_version=2.5.6
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tar.bz2
+__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/libassuan/${__pkg_tarball_name}
+__pkg_configure_extra_args=()
+__pkg_build_type=autotools
+__pkg_deps=(
+    ./ports/l/libgpg-error/libgpg-error-1.47
+)
+__pkg_link_dirs=(bin include lib share)
+__pkg_maybe_copy_persistent_config=()
