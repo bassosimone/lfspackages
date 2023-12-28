@@ -64,14 +64,18 @@ class Deps:
     def expand_reverse_deps(self):
         """Transforms the reverse field to include transitive reverse deps."""
         revdeps_full_set: Dict[str, Set[str]] = {}
+
         for key, values in self.reverse.items():
             revdeps_full_set.setdefault(key, set())
             full_values: Set[str] = set()
             full_values |= values
+
             for value in values:
                 if value in self.reverse:
                     full_values |= self.reverse[value]
+
             revdeps_full_set[key] = full_values
+
         self.reverse = revdeps_full_set
 
 
