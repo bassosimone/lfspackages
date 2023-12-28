@@ -1,26 +1,29 @@
-pkg_print_deps() {
-    echo ""
-}
-
-pkg_print_destdir() {
-    echo "${__pkg_install_prefix}/openldap-2.6.6"
-}
+__pkg_sha256=082e998cf542984d43634442dbe11da860759e510907152ea579bdc42fe39ea0
+__pkg_name=openldap
+__pkg_version=2.6.6
+__pkg_deps=()
+__pkg_distro_name=${__pkg_name}-${__pkg_version}
+__pkg_src_name=${__pkg_name}-${__pkg_version}
+__pkg_tarball_name=${__pkg_name}-${__pkg_version}.tgz
+__pkg_tarball_url=https://www.gnupg.org/ftp/gcrypt/${__pkg_name}/${__pkg_tarball_name}
+__pkg_link_dirs=(include lib) # bare minimum required by gnupg
+__pkg_maybe_copy_persistent_config=()
 
 pkg_build() {
-    pkg_lib_download https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.6.tgz
-    pkg_lib_verify openldap-2.6.6.tgz 082e998cf542984d43634442dbe11da860759e510907152ea579bdc42fe39ea0
-    pkg_lib_extract openldap-2.6.6.tgz
+    pkg_lib_download https://www.openldap.org/software/download/OpenLDAP/openldap-release/${__pkg_tarball_name}
+    pkg_lib_verify ${__pkg_tarball_name} ${__pkg_sha256}
+    pkg_lib_extract ${__pkg_tarball_name}
 
-    pkg_lib_run cd openldap-2.6.6
+    pkg_lib_run cd ${__pkg_src_name}
 
-    pkg_lib_download https://www.linuxfromscratch.org/patches/blfs/12.0/openldap-2.6.6-consolidated-1.patch
-    pkg_lib_verify openldap-2.6.6-consolidated-1.patch bb483c15fe935ae7c89bc1fe85a3f6e1a9df1381103f629d9c9cadaf00d52e34
+    pkg_lib_download https://www.linuxfromscratch.org/patches/blfs/12.0/openldap-${__pkg_version}-consolidated-1.patch
+    pkg_lib_verify openldap-${__pkg_version}-consolidated-1.patch bb483c15fe935ae7c89bc1fe85a3f6e1a9df1381103f629d9c9cadaf00d52e34
 
-    pkg_lib_run patch -Np1 -i openldap-2.6.6-consolidated-1.patch
+    pkg_lib_run patch -Np1 -i openldap-${__pkg_version}-consolidated-1.patch
 
     pkg_lib_run autoconf
 
-    pkg_lib_run ./configure --prefix=${__pkg_install_prefix}/openldap-2.6.6 \
+    pkg_lib_run ./configure --prefix=${__pkg_install_prefix}/${__pkg_distro_name} \
         --disable-static \
         --enable-versioning=yes \
         --disable-debug \
@@ -43,11 +46,4 @@ pkg_build() {
     pkg_lib_run make -j$(nproc)
 
     pkg_lib_run sudo make install
-}
-
-pkg_link() {
-    # Note: installing the minimum required by gnupg
-    for dirname in include lib; do
-        pkg_lib_symlink_all ${__pkg_install_prefix}/openldap-2.6.6/$dirname ${__pkg_link_prefix}/$dirname
-    done
 }
