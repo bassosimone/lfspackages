@@ -149,7 +149,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "9147bffaaccc14c71988a4e227f73af3a30b7469",
+    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
     "ruby_source_path": "Formula/p/pinentry.rb",
     "ruby_source_checksum": {
         "sha256": "1e205b1c972687a118c236c245f76bd57348957b22a87146f1ff8a5eb953f5a2"
@@ -166,24 +166,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "pinentry": 17180
+                "pinentry": 17148
             },
             "90d": {
-                "pinentry": 49621
+                "pinentry": 49665
             },
             "365d": {
-                "pinentry": 113794
+                "pinentry": 113792
             }
         },
         "install_on_request": {
             "30d": {
-                "pinentry": 206
+                "pinentry": 205
             },
             "90d": {
-                "pinentry": 699
+                "pinentry": 698
             },
             "365d": {
-                "pinentry": 2835
+                "pinentry": 2831
             }
         },
         "build_error": {

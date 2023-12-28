@@ -122,7 +122,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "9147bffaaccc14c71988a4e227f73af3a30b7469",
+    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
     "ruby_source_path": "Formula/j/jq.rb",
     "ruby_source_checksum": {
         "sha256": "22f0b5995a4632a1625adb2bce56bda3bceb9d6ae28f330101b23d1b8dbe9105"
@@ -146,24 +146,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "jq": 78503
+                "jq": 78652
             },
             "90d": {
-                "jq": 173031
+                "jq": 173126
             },
             "365d": {
-                "jq": 420454
+                "jq": 420657
             }
         },
         "install_on_request": {
             "30d": {
-                "jq": 77434
+                "jq": 77576
             },
             "90d": {
-                "jq": 170518
+                "jq": 170602
             },
             "365d": {
-                "jq": 414304
+                "jq": 414500
             }
         },
         "build_error": {

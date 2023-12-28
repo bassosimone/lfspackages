@@ -3,7 +3,7 @@ pkg_print_deps() {
 }
 
 pkg_print_destdir() {
-    echo "/opt/package/which-2.21"
+    echo "/opt/package/gnu-which-2.21"
 }
 
 pkg_build() {
@@ -13,13 +13,13 @@ pkg_build() {
 
     pkg_lib_run cd which-2.21
 
-    pkg_lib_run ./configure --prefix=/opt/package/which-2.21
+    pkg_lib_run ./configure --prefix=/opt/package/gnu-which-2.21
     pkg_lib_run make -j$(nproc)
 
     pkg_lib_run sudo make install
 }
 
 pkg_link() {
-    pkg_lib_symlink /opt/package/which-2.21/bin/which /opt/bin/which
-    pkg_lib_symlink /opt/package/which-2.21/share/man/man1/which.1 /opt/share/man/man1/which.1
+    pkg_lib_symlink /opt/package/gnu-which-2.21/bin/which /opt/bin/which
+    pkg_lib_symlink /opt/package/gnu-which-2.21/share/man/man1/which.1 /opt/share/man/man1/which.1
 }

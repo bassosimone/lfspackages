@@ -135,7 +135,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "9147bffaaccc14c71988a4e227f73af3a30b7469",
+    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
     "ruby_source_path": "Formula/n/nettle.rb",
     "ruby_source_checksum": {
         "sha256": "1bbd416c2cfb9871e4b2bf250e11af56192cc516ee0ad059e0ca18357a4e8287"
@@ -144,24 +144,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "nettle": 46833
+                "nettle": 46793
             },
             "90d": {
-                "nettle": 141924
+                "nettle": 141842
             },
             "365d": {
-                "nettle": 576517
+                "nettle": 576521
             }
         },
         "install_on_request": {
             "30d": {
-                "nettle": 885
+                "nettle": 887
             },
             "90d": {
                 "nettle": 3111
             },
             "365d": {
-                "nettle": 17383
+                "nettle": 17385
             }
         },
         "build_error": {

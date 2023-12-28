@@ -137,7 +137,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "9147bffaaccc14c71988a4e227f73af3a30b7469",
+    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
     "ruby_source_path": "Formula/o/openldap.rb",
     "ruby_source_checksum": {
         "sha256": "7062aa961bff113d49f560e766639b0bed514bcdd81ebc150eaa47c094029cab"
@@ -153,24 +153,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "openldap": 41512
+                "openldap": 41434
             },
             "90d": {
-                "openldap": 133122
+                "openldap": 133117
             },
             "365d": {
-                "openldap": 503433
+                "openldap": 503418
             }
         },
         "install_on_request": {
             "30d": {
-                "openldap": 1872
+                "openldap": 1877
             },
             "90d": {
-                "openldap": 7057
+                "openldap": 7050
             },
             "365d": {
-                "openldap": 117007
+                "openldap": 116918
             }
         },
         "build_error": {

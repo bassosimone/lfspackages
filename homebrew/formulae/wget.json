@@ -163,7 +163,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "9147bffaaccc14c71988a4e227f73af3a30b7469",
+    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
     "ruby_source_path": "Formula/w/wget.rb",
     "ruby_source_checksum": {
         "sha256": "2e6ee904e732f3f40f7459d566d4dc6a6e6c6105ff80721e2afe3cbb21d76fde"
@@ -217,29 +217,29 @@
     "analytics": {
         "install": {
             "30d": {
-                "wget": 60519
+                "wget": 60497
             },
             "90d": {
-                "wget": 191195
+                "wget": 191160
             },
             "365d": {
-                "wget": 744792
+                "wget": 744546
             }
         },
         "install_on_request": {
             "30d": {
-                "wget": 60433
+                "wget": 60411
             },
             "90d": {
-                "wget": 190841
+                "wget": 190813
             },
             "365d": {
-                "wget": 743367
+                "wget": 743122
             }
         },
         "build_error": {
             "30d": {
-                "wget": 1
+                "wget": 2
             }
         }
     },
