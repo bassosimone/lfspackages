@@ -130,7 +130,7 @@ building packages. Before building a specific package, library code
 imports default build functions and variables from the
 [lib/basepackage.bash](lib/basepackage.bash) file. These build
 functions expect the rule to build each package to define
-specific variables and possibly ocverride the default functions,
+specific variables and possibly override the default functions,
 as described below.
 
 The rule to build each package lives in the package directory, e.g.,
@@ -171,6 +171,8 @@ The `__pkg_build_type` value, i.e., `autotools`, is such that the `pkg_build`
 function uses the default rules for building using GNU autotools (which boils down
 to something like `./configure && make && sudo make install`).
 
+Also note how `__pkg_deps` defines all the dependencies.
+
 Here's another example where we need to override the `pkg_build` function:
 
 ```bash
@@ -200,8 +202,7 @@ pkg_build() {
 }
 ```
 
-Note how the `__pkg_deps` bash array lists the dependencies and how
-the `__pkg_link_dirs` tells [bin/pkg_link](bin/pkg_link) which directories
+Note how the `__pkg_link_dirs` tells [bin/pkg_link](bin/pkg_link) which directories
 of the installed package contains files to symlink into `/opt`. We are
 instructing core libraries to recursively symlink any file inside the
 `bin`, `opt`, and `share` directories of the package installation
