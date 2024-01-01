@@ -7,8 +7,8 @@ We use [BLFS v12.0-systemd](https://www.linuxfromscratch.org/blfs/view/12.0-syst
 ## Installing dependencies
 
 If you created the base system using [bassosimone/lfsbootstrap](
-https://github.com/bassosimone/lfsbootstrap), then you already have
-all the required dependencies installed.
+https://github.com/bassosimone/lfsbootstrap), you already have
+all the required dependencies.
 
 ## Installing packages
 
@@ -19,7 +19,8 @@ To install GNU which 2.21, you would use the following command:
 ```
 
 It will download the package sources and its dependencies, compile, install
-at `/opt/packages/gnu-which-2.21` and symlink at `/opt`.
+at `/opt/packages/gnu-which-2.21` and symlink binaries, headers, dynamic
+libraries and documentation at `/opt/{bin,include,lib,share}`.
 
 Use a similar pattern to install other packages.
 
@@ -34,8 +35,8 @@ Run
 to synchronize our local cache of packages that would be installed by
 the [homebrew](https://brew.sh) package manager.
 
-We name packages using the same names utilized by [homebrew](https://brew.sh),
-which simplifies checking whether there are new versions.
+(We name packages using the same names utilized by [homebrew](https://brew.sh),
+which simplifies checking for updates.)
 
 Then run
 
@@ -49,7 +50,7 @@ Update the corresponding files in the [ports](ports) directory to download and
 install the new versions, cross checking build instructions and package
 dependencies with the [BLFS book](https://www.linuxfromscratch.org/blfs/view/12.0-systemd/).
 
-Then, it's time to recompile and reinstall, for which we use `pkg_upgrade`.
+Then, it's time to recompile and reinstall, for which we use the `pkg_upgrade` tool.
 
 Assuming `gnu-which` needs to be updated to `v2.22`, you would run:
 
@@ -57,10 +58,10 @@ Assuming `gnu-which` needs to be updated to `v2.22`, you would run:
 ./bin/pkg_upgrade ./ports/g/gnu-which/gnu-which-2.22
 ```
 
-This command would recompile and reinstall the package and all its
-reverse dependencies in the correct recompile order.
+This command would compile and reinstall the package and all its
+reverse dependencies in the correct order.
 
-Use the `-n` flag to see what commands would be run if updating:
+Use the `-n` flag to see what commands would be run:
 
 ```sh
 ./bin/pkg_upgrade -n ./ports/g/gnu-which/gnu-which-2.22
@@ -68,13 +69,13 @@ Use the `-n` flag to see what commands would be run if updating:
 
 ## Low-level commands
 
-To see package dependencies, use `pkg_deps`, e.g.:
+To see package dependencies, use the `pkg_deps` tool, e.g.:
 
 ```sh
 ./bin/pkg_deps ./ports/g/gnupg/gnupg-2.4.3
 ```
 
-To rebuild a single package, e.g, `gnu-which-2.21`, use:
+To recompile and install a single package, e.g, `gnu-which-2.21`, use:
 
 ```sh
 ./bin/pkg_build ./ports/g/gnu-which/gnu-which-2.21
@@ -89,9 +90,22 @@ To symlink the package to `/opt`, use:
 ./bin/pkg_link ./ports/g/gnu-which/gnu-which-2.21
 ```
 
+Beware that over time some broken symlinks may accumulate under `/opt`
+as packages are updated. You should use:
+
+```sh
+find /opt -xtype l
+```
+
+To see all the broken symlinks.
+
+To remove a package just `rm -rf /opt/package/DIR` where DIR is the
+directory where we installed it and then check for broken links
+using the above `find` command and remove them all.
+
 ## Run unit tests
 
-Use:
+Run:
 
 ```sh
 ./bin/pkg_test_all
@@ -111,14 +125,18 @@ we need to update a package;
 
 ## Implementation details
 
-The build rule for a package lives in [lib/core.bash](lib/core.bash). Before
-building a package, we import default build functions and variables from
-the [lib/basepackage.bash](lib/basepackage.bash) file.
+The [lib/core.bash](lib/core.bash) contains library functions for
+building packages. Before building a specific package, library code
+imports default build functions and variables from the
+[lib/basepackage.bash](lib/basepackage.bash) file. These build
+functions expect the rule to build each package to define
+specific variables and possibly ocverride the default functions,
+as described below.
 
 The rule to build each package lives in the package directory, e.g.,
 `./ports/g/gnu-which/gnu-which-2.21`, as a bash script named `package.bash`. In
 most cases the `package.bash` file only needs to define specific variables
-without overriding any function.
+without overriding any function, but obviously there are exceptions.
 
 Here's an example based on code to build gnupg that was current on 2024-01-1:
 
@@ -153,8 +171,7 @@ The `__pkg_build_type` value, i.e., `autotools`, is such that the `pkg_build`
 function uses the default rules for building using GNU autotools (which boils down
 to something like `./configure && make && sudo make install`).
 
-Here's another example where we need to override `pkg_build` to perform
-a custom build for the `pass@1.7.4` package:
+Here's another example where we need to override the `pkg_build` function:
 
 ```bash
 __pkg_sha256=cfa9faf659f2ed6b38e7a7c3fb43e177d00edbacc6265e6e32215ff40e3793c0
@@ -185,4 +202,7 @@ pkg_build() {
 
 Note how the `__pkg_deps` bash array lists the dependencies and how
 the `__pkg_link_dirs` tells [bin/pkg_link](bin/pkg_link) which directories
-of the installed package contains files to symlink into `/opt`.
+of the installed package contains files to symlink into `/opt`. We are
+instructing core libraries to recursively symlink any file inside the
+`bin`, `opt`, and `share` directories of the package installation
+directory, i.e., `/opt/package/pass-1.7.4`.
