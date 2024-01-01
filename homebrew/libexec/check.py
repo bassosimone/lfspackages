@@ -18,8 +18,10 @@ def main():
 
         formula = f"./homebrew/formulae/{pkgname}.json"
         if not os.path.exists(formula):
+            sys.stderr.write(f"warning: {formula} does not exist\n")
             continue
 
+        sys.stderr.write(f"info: checking {formula}...\n")
         with open(formula, "r") as filep:
             version = json.load(filep)["versions"]["stable"]
 
