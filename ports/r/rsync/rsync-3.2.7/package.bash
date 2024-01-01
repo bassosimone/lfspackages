@@ -11,6 +11,8 @@ __pkg_configure_extra_args=(
     --without-included-zlib
 )
 __pkg_build_type=autotools
-__pkg_deps=()
+__pkg_deps=(
+    ./ports/p/popt/popt-1.19
+)
 __pkg_link_dirs=(bin share)
 __pkg_maybe_copy_persistent_config=()
