@@ -207,3 +207,35 @@ of the installed package contains files to symlink into `/opt`. We are
 instructing core libraries to recursively symlink any file inside the
 `bin`, `opt`, and `share` directories of the package installation
 directory, i.e., `/opt/package/pass-1.7.4`.
+
+The `__pkg_maybe_copy_persistent_config` contains the directories from which
+we should attempt to copy configuration files inside `/opt`. We don't symlink
+config files because upgrading would cause users to loose config that they
+may have modified. Instead, we proceed as follows:
+
+1. say package FOO-1.1.0 needs `/opt/package/FOO-1.1.0/etc/foo.conf`;
+2. we rename `foo.conf` to `foo.conf.new` when building;
+3. we copy `foo.conf.new` to `/opt/etc/foo.conf` is `foo.conf` does not exist;
+4. we symlink `/opt/package/FOO-1.1.0/etc/foo.conf` to `/opt/etc/foo.conf`.
+
+For example:
+
+```text
+> ls -lha /opt/etc/wgetrc
+-rw-r--r-- 1 root root 4.9K Jan  1 19:09 /opt/etc/wgetrc
+
+> ls -lha /opt/package/wget-1.21.4/etc
+total 16K
+drwxr-xr-x 2 root root 4.0K Jan  1 19:09 .
+drwxr-xr-x 5 root root 4.0K Jan  1 19:09 ..
+lrwxrwxrwx 1 root root   15 Jan  1 19:09 wgetrc -> /opt/etc/wgetrc
+-rw-r--r-- 1 root root 4.9K Jan  1 19:09 wgetrc.new
+```
+
+You should periodically check for `.new` files inside `/opt/package` using:
+
+```sh
+find /opt/package -type f -name \*.new
+```
+
+And you should merge the `.new` files accordingly.
