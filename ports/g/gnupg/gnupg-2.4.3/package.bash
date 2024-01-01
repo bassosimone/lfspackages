@@ -13,6 +13,7 @@ __pkg_deps=(
     ./ports/l/libassuan/libassuan-2.5.6
     ./ports/l/libgcrypt/libgcrypt-1.10.3
     ./ports/l/libksba/libksba-1.6.5
+    ./ports/p/pinentry/pinentry-1.2.1
     ./ports/n/npth/npth-1.6
 )
 __pkg_link_dirs=(bin libexec sbin share)
