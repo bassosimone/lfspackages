@@ -207,7 +207,7 @@
     "disable_reason": null,
     "post_install_defined": true,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/g/gnutls.rb",
     "ruby_source_checksum": {
         "sha256": "c60841144a35f1b19359db882f22ef73fa808d2e65dda738c88aa413f12e063b"
@@ -216,31 +216,31 @@
     "analytics": {
         "install": {
             "30d": {
-                "gnutls": 147224
+                "gnutls": 137977
             },
             "90d": {
-                "gnutls": 403633
+                "gnutls": 403246
             },
             "365d": {
-                "gnutls": 987632
+                "gnutls": 1002203
             }
         },
         "install_on_request": {
             "30d": {
-                "gnutls": 79804
+                "gnutls": 74066
             },
             "90d": {
-                "gnutls": 203457
+                "gnutls": 203150
             },
             "365d": {
-                "gnutls": 482111
+                "gnutls": 489266
             }
         },
         "build_error": {
             "30d": {
-                "gnutls": 105
+                "gnutls": 98
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

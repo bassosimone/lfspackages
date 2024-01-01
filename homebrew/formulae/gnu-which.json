@@ -126,7 +126,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/g/gnu-which.rb",
     "ruby_source_checksum": {
         "sha256": "ef4b2763e158be1d868accb5813aac4fbd60479b7b1de45addbe62a95555fdb6"
@@ -139,24 +139,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "gnu-which": 148
+                "gnu-which": 136
             },
             "90d": {
-                "gnu-which": 426
+                "gnu-which": 412
             },
             "365d": {
-                "gnu-which": 1469
+                "gnu-which": 1478
             }
         },
         "install_on_request": {
             "30d": {
-                "gnu-which": 143
+                "gnu-which": 132
             },
             "90d": {
-                "gnu-which": 410
+                "gnu-which": 396
             },
             "365d": {
-                "gnu-which": 1385
+                "gnu-which": 1393
             }
         },
         "build_error": {
@@ -165,5 +165,5 @@
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

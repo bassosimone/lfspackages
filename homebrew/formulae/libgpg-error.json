@@ -127,7 +127,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/lib/libgpg-error.rb",
     "ruby_source_checksum": {
         "sha256": "3a519a86663ae23c3136087953fb42677c069c0bb84200a8d854b6fa3006d3ca"
@@ -140,24 +140,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "libgpg-error": 28246
+                "libgpg-error": 27088
             },
             "90d": {
-                "libgpg-error": 84611
+                "libgpg-error": 84667
             },
             "365d": {
-                "libgpg-error": 282581
+                "libgpg-error": 285303
             }
         },
         "install_on_request": {
             "30d": {
-                "libgpg-error": 385
+                "libgpg-error": 375
             },
             "90d": {
-                "libgpg-error": 1246
+                "libgpg-error": 1197
             },
             "365d": {
-                "libgpg-error": 6555
+                "libgpg-error": 6591
             }
         },
         "build_error": {
@@ -166,5 +166,5 @@
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

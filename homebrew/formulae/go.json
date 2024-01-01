@@ -111,7 +111,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/g/go.rb",
     "ruby_source_checksum": {
         "sha256": "645d1e5ce537c2397938a25397e44abe4c96d366fc35454e68325188c2239a83"
@@ -120,31 +120,31 @@
     "analytics": {
         "install": {
             "30d": {
-                "go": 84083
+                "go": 81087
             },
             "90d": {
-                "go": 272101
+                "go": 270055
             },
             "365d": {
-                "go": 782098
+                "go": 787984
             }
         },
         "install_on_request": {
             "30d": {
-                "go": 62608
+                "go": 60055
             },
             "90d": {
-                "go": 202138
+                "go": 201281
             },
             "365d": {
-                "go": 581003
+                "go": 584910
             }
         },
         "build_error": {
             "30d": {
-                "go": 239
+                "go": 240
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

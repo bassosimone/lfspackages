@@ -134,7 +134,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/lib/libassuan.rb",
     "ruby_source_checksum": {
         "sha256": "f6c2335e26b400c9b3b5e7604b516bd79f1bb44a766796eec666a4703afb7725"
@@ -143,24 +143,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "libassuan": 17570
+                "libassuan": 16824
             },
             "90d": {
-                "libassuan": 52108
+                "libassuan": 52169
             },
             "365d": {
-                "libassuan": 140397
+                "libassuan": 142082
             }
         },
         "install_on_request": {
             "30d": {
-                "libassuan": 284
+                "libassuan": 276
             },
             "90d": {
-                "libassuan": 1057
+                "libassuan": 1006
             },
             "365d": {
-                "libassuan": 4098
+                "libassuan": 4132
             }
         },
         "build_error": {
@@ -169,5 +169,5 @@
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

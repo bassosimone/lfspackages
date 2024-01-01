@@ -27,53 +27,43 @@
     "version_scheme": 0,
     "bottle": {
         "stable": {
-            "rebuild": 0,
+            "rebuild": 1,
             "root_url": "https://ghcr.io/v2/homebrew/core",
             "files": {
                 "arm64_sonoma": {
                     "cellar": "/opt/homebrew/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:0664e43cdee625e336007730038b596e5cbae9c66036289cc1625052f0c37af4",
-                    "sha256": "0664e43cdee625e336007730038b596e5cbae9c66036289cc1625052f0c37af4"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:fab501c48e2f9e64bbf906ff017ca61f432555425135d16ebd0c69c0de2b6b2b",
+                    "sha256": "fab501c48e2f9e64bbf906ff017ca61f432555425135d16ebd0c69c0de2b6b2b"
                 },
                 "arm64_ventura": {
                     "cellar": "/opt/homebrew/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:29426f6dd15964b20f8561f9f0a7a332a80086a0b480ac739719213c76f2d5e9",
-                    "sha256": "29426f6dd15964b20f8561f9f0a7a332a80086a0b480ac739719213c76f2d5e9"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:3225031ce7d791f4a83eaf1acc44c5e5f1dc6da7abe9882f4c4b06b6fa2c7a58",
+                    "sha256": "3225031ce7d791f4a83eaf1acc44c5e5f1dc6da7abe9882f4c4b06b6fa2c7a58"
                 },
                 "arm64_monterey": {
                     "cellar": "/opt/homebrew/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:7812d6a2e9faa260f918bd39ef8a0e6cb37063b4f9bac67449e7e9bf8bda6a70",
-                    "sha256": "7812d6a2e9faa260f918bd39ef8a0e6cb37063b4f9bac67449e7e9bf8bda6a70"
-                },
-                "arm64_big_sur": {
-                    "cellar": "/opt/homebrew/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:989d4f6ec3b7caad51088b0afd70b7544ec2bb210d3fc6cd845252e776884289",
-                    "sha256": "989d4f6ec3b7caad51088b0afd70b7544ec2bb210d3fc6cd845252e776884289"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:6af7058f3fa120b38b6a3fe203569a0f9c2ec0696bebc21c8b1ff310793d0371",
+                    "sha256": "6af7058f3fa120b38b6a3fe203569a0f9c2ec0696bebc21c8b1ff310793d0371"
                 },
                 "sonoma": {
                     "cellar": "/usr/local/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:db3357512f13bcc05b9d02a03136e10d04f952c8e95dff3e593a32cb197e10ed",
-                    "sha256": "db3357512f13bcc05b9d02a03136e10d04f952c8e95dff3e593a32cb197e10ed"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:534ee0d0dc9cd6fa1658a6ca14ebf7e11bdca8fb4d765823f0441a3d667a1828",
+                    "sha256": "534ee0d0dc9cd6fa1658a6ca14ebf7e11bdca8fb4d765823f0441a3d667a1828"
                 },
                 "ventura": {
                     "cellar": "/usr/local/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:03c932365fcfc8e8523c82a5da61cb22eb8341a35a2c959cf27468657b134f92",
-                    "sha256": "03c932365fcfc8e8523c82a5da61cb22eb8341a35a2c959cf27468657b134f92"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:bf5b152fc307a19c274a527403d74eb03428dc0a184ff5f2b28301e8fbabfeb4",
+                    "sha256": "bf5b152fc307a19c274a527403d74eb03428dc0a184ff5f2b28301e8fbabfeb4"
                 },
                 "monterey": {
                     "cellar": "/usr/local/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:b68dd6afb59524ff8c7711b2d2c77227d6c7aa1f3994ca3cf0071d748bdb9c13",
-                    "sha256": "b68dd6afb59524ff8c7711b2d2c77227d6c7aa1f3994ca3cf0071d748bdb9c13"
-                },
-                "big_sur": {
-                    "cellar": "/usr/local/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:c2f581d225a0f1f40f285734b1d399068b4cbda11e5d1042f8ab4b3672e55325",
-                    "sha256": "c2f581d225a0f1f40f285734b1d399068b4cbda11e5d1042f8ab4b3672e55325"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:64744bbdd854d2716f1a8ed694b9f9b4b4d95650c7bf007b387a28a5239634bd",
+                    "sha256": "64744bbdd854d2716f1a8ed694b9f9b4b4d95650c7bf007b387a28a5239634bd"
                 },
                 "x86_64_linux": {
                     "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:161684fd77821834cc9a918a8e9b01636f5f6c5ce92a2d7abf2c6628d71a8100",
-                    "sha256": "161684fd77821834cc9a918a8e9b01636f5f6c5ce92a2d7abf2c6628d71a8100"
+                    "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:167e6a9b406c74a9d805aff8b97f5873fcb91396b4ba10980370ab03472f6950",
+                    "sha256": "167e6a9b406c74a9d805aff8b97f5873fcb91396b4ba10980370ab03472f6950"
                 }
             }
         }
@@ -92,8 +82,14 @@
     "test_dependencies": [],
     "recommended_dependencies": [],
     "optional_dependencies": [],
-    "uses_from_macos": [],
-    "uses_from_macos_bounds": [],
+    "uses_from_macos": [
+        {
+            "mandoc": "build"
+        }
+    ],
+    "uses_from_macos_bounds": [
+        {}
+    ],
     "requirements": [],
     "conflicts_with": [],
     "conflicts_with_reasons": [],
@@ -137,10 +133,10 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/o/openldap.rb",
     "ruby_source_checksum": {
-        "sha256": "7062aa961bff113d49f560e766639b0bed514bcdd81ebc150eaa47c094029cab"
+        "sha256": "095c28f3f8d6ceda43f95b71b71e54ed64561687eb8e7e1bbb71e1244b409b16"
     },
     "variations": {
         "x86_64_linux": {
@@ -153,31 +149,31 @@
     "analytics": {
         "install": {
             "30d": {
-                "openldap": 41434
+                "openldap": 39773
             },
             "90d": {
-                "openldap": 133117
+                "openldap": 131187
             },
             "365d": {
-                "openldap": 503418
+                "openldap": 507517
             }
         },
         "install_on_request": {
             "30d": {
-                "openldap": 1877
+                "openldap": 1819
             },
             "90d": {
-                "openldap": 7050
+                "openldap": 6810
             },
             "365d": {
-                "openldap": 116918
+                "openldap": 116890
             }
         },
         "build_error": {
             "30d": {
-                "openldap": 6
+                "openldap": 8
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

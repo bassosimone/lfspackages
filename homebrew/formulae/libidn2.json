@@ -142,7 +142,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/lib/libidn2.rb",
     "ruby_source_checksum": {
         "sha256": "cedee46d44975e5ef6521453590e92b0ba59b8929b68d339d86049435f4e20d4"
@@ -331,24 +331,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "libidn2": 60640
+                "libidn2": 58612
             },
             "90d": {
-                "libidn2": 250934
+                "libidn2": 249764
             },
             "365d": {
-                "libidn2": 723192
+                "libidn2": 728787
             }
         },
         "install_on_request": {
             "30d": {
-                "libidn2": 10627
+                "libidn2": 9858
             },
             "90d": {
-                "libidn2": 45083
+                "libidn2": 44556
             },
             "365d": {
-                "libidn2": 99740
+                "libidn2": 100721
             }
         },
         "build_error": {
@@ -357,5 +357,5 @@
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

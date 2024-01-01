@@ -124,7 +124,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/lib/libgcrypt.rb",
     "ruby_source_checksum": {
         "sha256": "5f542c64eaf4d8a3d7c88eab78e01451619e2cd8cf78c7dca3636f5666c9fd4e"
@@ -133,31 +133,31 @@
     "analytics": {
         "install": {
             "30d": {
-                "libgcrypt": 35920
+                "libgcrypt": 32965
             },
             "90d": {
-                "libgcrypt": 89914
+                "libgcrypt": 91458
             },
             "365d": {
-                "libgcrypt": 249931
+                "libgcrypt": 253199
             }
         },
         "install_on_request": {
             "30d": {
-                "libgcrypt": 2903
+                "libgcrypt": 2640
             },
             "90d": {
-                "libgcrypt": 7299
+                "libgcrypt": 7390
             },
             "365d": {
-                "libgcrypt": 22052
+                "libgcrypt": 22317
             }
         },
         "build_error": {
             "30d": {
-                "libgcrypt": 4
+                "libgcrypt": 2
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }

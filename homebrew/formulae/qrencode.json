@@ -132,7 +132,7 @@
     "disable_reason": null,
     "post_install_defined": false,
     "service": null,
-    "tap_git_head": "fb3ce1ee1e1dbb3703a0089b06b698813f52c39a",
+    "tap_git_head": "381e8239073e9dfcc4644fa573748eaa28649f92",
     "ruby_source_path": "Formula/q/qrencode.rb",
     "ruby_source_checksum": {
         "sha256": "e6d3256a0d7ac894cab1daa086b4f3192ca0ab92ac586c282b55044a3721a160"
@@ -157,24 +157,24 @@
     "analytics": {
         "install": {
             "30d": {
-                "qrencode": 1743
+                "qrencode": 1702
             },
             "90d": {
-                "qrencode": 5070
+                "qrencode": 5075
             },
             "365d": {
-                "qrencode": 28278
+                "qrencode": 28400
             }
         },
         "install_on_request": {
             "30d": {
-                "qrencode": 1536
+                "qrencode": 1504
             },
             "90d": {
-                "qrencode": 4414
+                "qrencode": 4426
             },
             "365d": {
-                "qrencode": 25714
+                "qrencode": 25817
             }
         },
         "build_error": {
@@ -183,5 +183,5 @@
             }
         }
     },
-    "generated_date": "2023-12-28"
+    "generated_date": "2024-01-01"
 }
