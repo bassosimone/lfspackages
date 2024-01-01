@@ -208,7 +208,7 @@ instructing core libraries to recursively symlink any file inside the
 `bin`, `opt`, and `share` directories of the package installation
 directory, i.e., `/opt/package/pass-1.7.4`.
 
-The `__pkg_maybe_copy_persistent_config` contains the directories from which
+The `__pkg_maybe_copy_persistent_config` array contains the directories from which
 we should attempt to copy configuration files inside `/opt`. We don't symlink
 config files because upgrading would cause users to loose config that they
 may have modified. Instead, we proceed as follows:
